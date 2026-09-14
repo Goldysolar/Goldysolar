@@ -1,0 +1,100 @@
+{
+  "nav": {
+    "startseite": "Startseite",
+    "anfrage": "Anfrage",
+    "leistungen": "Leistungen",
+    "projekte": "Projekte",
+    "ueberUns": "Über Uns",
+    "kontakt": "Kontakt"
+  },
+  "hero": {
+    "companyName": "GOLDY SOLAR",
+    "companySuffix": "GmbH",
+    "headline": "Solaranlagen • Speicher • Montage",
+    "subtitle": "Ihr Fachbetrieb für Photovoltaik",
+    "feature1": "Von der ersten Beratung bis zur fachgerechten Installation und Inbetriebnahme.",
+    "feature2": "Ob Eigenheim, Gewerbebetrieb oder Solarpark: Wir liefern zuverlässige Lösungen.",
+    "feature3": "Zuverlässige Lösungen für eine sichere und nachhaltige Energieversorgung.",
+    "ctaButton": "1 Minute Anfrage",
+    "badge": "Zukunft & Nachhaltigkeit"
+  },
+  "leistungen": {
+    "sectionLabel": "Unsere Leistungen",
+    "sectionTitle": "Solarlösungen für jeden Bedarf",
+    "card1": {
+      "badge": "Privatkunden",
+      "title": "Einfamilienhaus",
+      "subtitle": "Photovoltaik für Ihr Zuhause",
+      "cta": "1 Minute Anfrage"
+    },
+    "card2": {
+      "badge": "Gewerbe & Industrie",
+      "title": "C&I",
+      "subtitle": "Solar & Speicher für Unternehmen",
+      "cta": "1 Minute Anfrage"
+    },
+    "card3": {
+      "badge": "EPC & Megawatt",
+      "title": "Solar Park Ingenieur",
+      "subtitle": "EPC & Utility Scale Großprojekte",
+      "cta": "1 Minute Anfrage"
+    }
+  },
+  "warumGoldySolar": {
+    "sectionLabel": "Warum Goldy Solar",
+    "headline": "Über 15 Jahre Erfahrung in der Energietechnik",
+    "feature1Title": "Alles aus einer Hand",
+    "feature1Desc": "Von der Planung bis zur Inbetriebnahme.",
+    "feature2Title": "Ingenieurwissen trifft Handwerk",
+    "feature2Desc": "Praxisnahe Lösungen auf Basis langjähriger Erfahrung.",
+    "feature3Title": "Deutschlandweite Projekte",
+    "feature3Desc": "Flexible Einsatzmöglichkeiten im gesamten Bundesgebiet.",
+    "feature4Title": "Höchste Qualitätsstandards",
+    "feature4Desc": "Arbeiten nach aktuellen VDE-Richtlinien und den Anforderungen der Netzbetreiber.",
+    "vdeBadge": "100% VDE-konforme Elektro- und Netzinstallationen"
+  },
+  "anfrage": {
+    "pageLabel": "1-Minuten Solar- & Energie-Anfrage",
+    "pageTitle": "Ihr Umstieg auf saubere & erneuerbare Energie",
+    "pageDesc": "Erhalten Sie in wenigen Schritten die beste Auswertung für Ihren Umstieg auf saubere, erneuerbare Energie.",
+    "step1": {
+      "label": "Schritt 1 von 5 • Gebäudeart",
+      "title": "Wo möchten Sie die Solaranlage & Energiesysteme installieren?",
+      "desc": "Wählen Sie die Art der Immobilie für eine exakte statische Auslegung und Wirtschaftlichkeit.",
+      "option1": "Einfamilienhaus",
+      "option2": "Firmengebäude",
+      "option3": "Freilandfläche",
+      "option4": "Sonstiges"
+    },
+    "errors": {
+      "pflichtfelder": "Bitte füllen Sie alle Pflichtfelder aus.",
+      "datenschutz": "Bitte akzeptieren Sie die Datenschutzhinweise.",
+      "verbindungsfehler": "Verbindungsfehler. Bitte prüfen Sie Ihre Internetverbindung.",
+      "sendenFehler": "Es gab einen Fehler beim Senden. Bitte versuchen Sie es erneut."
+    }
+  },
+  "footer": {
+    "col1Title": "Unternehmen",
+    "col2Title": "Leistungen & Lösungen",
+    "col3Title": "Kontakt",
+    "copyright": "Alle Rechte vorbehalten.",
+    "links": {
+      "startseite": "Startseite",
+      "ueberUns": "Über Uns",
+      "projekte": "Projekte",
+      "kontakt": "Kontakt",
+      "impressum": "Impressum",
+      "datenschutz": "Datenschutz"
+    }
+  },
+  "header": {
+    "email": "E-Mail:",
+    "mobileNummer": "Mobilnummer:",
+    "whatsapp": "WhatsApp",
+    "menuToggle": "Menü umschalten",
+    "navigation": "Navigation",
+    "kontakt": "Kontakt",
+    "mobileDrawerPhone": "Mobilnummer",
+    "mobileDrawerEmail": "E-Mail Anfragen"
+  }
+}
