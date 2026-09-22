@@ -33,8 +33,8 @@ const CustomSunLogo = ({ size = 110, color = '#FFD700' }: { size?: number, color
     
     {/* Floating Rays */}
     <g fill={color}>
-      {[0, 45, 90, 135, 180, 225, 270, 315].map((angle) => (
-        <polygon key={angle} points="50,0 42,17 58,17" transform={`rotate(${angle} 50 50)`} />
+      {[0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330].map((angle) => (
+        <polygon key={angle} points="50,0 44,17 56,17" transform={`rotate(${angle} 50 50)`} />
       ))}
     </g>
     
