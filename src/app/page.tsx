@@ -22,6 +22,8 @@ import {
   Factory,
   Wind,
   Check,
+  Lightbulb,
+  Plug,
 } from 'lucide-react';
 
 export default function HomePage() {
@@ -48,19 +50,19 @@ export default function HomePage() {
               alignItems: 'center',
             }}
           >
-            {/* Rotor-Nabe & Flügel */}
+            {/* Rotor-Nabe & Flügel (Now Lamp) */}
             <div
               style={{
                 width: '120px',
                 height: '120px',
                 borderRadius: '50%',
-                border: '4px solid rgba(255, 255, 255, 0.4)',
+                border: '4px solid rgba(255, 215, 0, 0.4)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
               }}
             >
-              <Wind size={72} color="#FFFFFF" />
+              <Lightbulb size={72} color="#FFD700" style={{ filter: 'drop-shadow(0 0 15px rgba(255, 215, 0, 0.8))' }} />
             </div>
             {/* Windrad-Turm */}
             <div
@@ -77,8 +79,8 @@ export default function HomePage() {
           <div
             style={{
               position: 'absolute',
-              left: '42%',
-              bottom: '20px',
+              left: '20%',
+              bottom: '25%',
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
@@ -88,27 +90,29 @@ export default function HomePage() {
           >
             <div
               style={{
-                width: '90px',
-                height: '90px',
+                width: '140px',
+                height: '140px',
                 borderRadius: '50%',
                 background: 'rgba(255, 255, 255, 0.25)',
                 backdropFilter: 'blur(8px)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                border: '2px solid rgba(255, 255, 255, 0.6)',
-                marginBottom: '8px',
+                border: '3px solid rgba(255, 255, 255, 0.6)',
+                marginBottom: '12px',
+                position: 'relative',
               }}
             >
-              <Sun size={52} color="#FFD700" />
+              <Sun size={86} color="#FFD700" style={{ position: 'absolute' }} />
+              <Plug size={40} color="#0F4761" style={{ position: 'absolute', zIndex: 2 }} />
             </div>
             <span
               style={{
-                fontSize: '12px',
+                fontSize: '15px',
                 fontWeight: 800,
                 letterSpacing: '1px',
                 background: 'rgba(15, 71, 97, 0.7)',
-                padding: '4px 12px',
+                padding: '6px 16px',
                 borderRadius: '9999px',
               }}
             >
