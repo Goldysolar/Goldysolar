@@ -1,3 +1,12 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Goldy Solar GmbH | Photovoltaik  Solaranlagen in Heidelberg",
+  description: "Ihr Experte für Photovoltaik, Batteriespeicher und Solaranlagen für Eigenheim und Gewerbe in Heidelberg und ganz Deutschland. Fordern Sie jetzt ein Angebot an.",
+  keywords: ["Photovoltaik", "Solaranlagen", "Batteriespeicher", "Heidelberg", "Gewerbe Solar", "Goldy Solar"],
+  alternates: { canonical: "https://goldysolar.de/" },
+};
+
 import React from 'react';
 import Link from 'next/link';
 import { COMPANY_INFO } from '@/data/companyData';
