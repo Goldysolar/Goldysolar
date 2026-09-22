@@ -40,7 +40,7 @@ export default function HomePage() {
           <div
             style={{
               position: 'absolute',
-              right: '8%',
+              right: '18%',
               bottom: '10%',
               width: '260px',
               height: '340px',
@@ -80,7 +80,7 @@ export default function HomePage() {
             style={{
               position: 'absolute',
               left: '20%',
-              bottom: '25%',
+              bottom: '-35px',
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
@@ -99,25 +99,12 @@ export default function HomePage() {
                 alignItems: 'center',
                 justifyContent: 'center',
                 border: '3px solid rgba(255, 255, 255, 0.6)',
-                marginBottom: '12px',
                 position: 'relative',
               }}
             >
               <Sun size={86} color="#FFD700" style={{ position: 'absolute' }} />
-              <Plug size={40} color="#0F4761" style={{ position: 'absolute', zIndex: 2 }} />
+              <Plug size={40} color="#FFD700" style={{ position: 'absolute', zIndex: 2 }} />
             </div>
-            <span
-              style={{
-                fontSize: '15px',
-                fontWeight: 800,
-                letterSpacing: '1px',
-                background: 'rgba(15, 71, 97, 0.7)',
-                padding: '6px 16px',
-                borderRadius: '9999px',
-              }}
-            >
-              Zukunft & Nachhaltigkeit
-            </span>
           </div>
         </div>
 
