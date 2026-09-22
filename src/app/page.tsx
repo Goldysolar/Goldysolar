@@ -26,6 +26,28 @@ import {
   Plug,
 } from 'lucide-react';
 
+const CustomSunLogo = ({ size = 110, color = '#FFD700' }: { size?: number, color?: string }) => (
+  <svg width={size} height={size} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g fill={color}>
+      <polygon points="50,0 40,24 60,24" />
+      <polygon points="50,0 40,24 60,24" transform="rotate(45 50 50)" />
+      <polygon points="50,0 40,24 60,24" transform="rotate(90 50 50)" />
+      <polygon points="50,0 40,24 60,24" transform="rotate(135 50 50)" />
+      <polygon points="50,0 40,24 60,24" transform="rotate(180 50 50)" />
+      <polygon points="50,0 40,24 60,24" transform="rotate(225 50 50)" />
+      <polygon points="50,0 40,24 60,24" transform="rotate(270 50 50)" />
+      <polygon points="50,0 40,24 60,24" transform="rotate(315 50 50)" />
+    </g>
+    <circle cx="50" cy="50" r="33" fill={color} />
+    <circle cx="50" cy="50" r="26" fill="#FFFFFF" />
+    <circle cx="50" cy="50" r="20" fill="none" stroke={color} strokeWidth="5" />
+    <path d="M 38 43 L 62 43 L 62 49 A 12 12 0 0 1 38 49 Z" fill={color} />
+    <rect x="42" y="32" width="4" height="11" fill={color} />
+    <rect x="54" y="32" width="4" height="11" fill={color} />
+    <rect x="48" y="61" width="4" height="7" fill={color} />
+  </svg>
+);
+
 export default function HomePage() {
   return (
     <div>
@@ -102,8 +124,7 @@ export default function HomePage() {
                 position: 'relative',
               }}
             >
-              <Sun size={86} color="#FFD700" fill="#FFFFFF" style={{ position: 'absolute' }} />
-              <Plug size={40} color="#FFD700" style={{ position: 'absolute', zIndex: 2 }} />
+              <CustomSunLogo size={110} color="#FFD700" />
             </div>
           </div>
         </div>
