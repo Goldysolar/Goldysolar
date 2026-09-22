@@ -18,8 +18,8 @@ const STEPS = [
   { id: 'FLAECHE', question: 'Wie groß ist die zur Verfügung stehende Dachfläche ca.?', options: ['Über 100 m²', '20 - 100 m²', 'Unter 20 m²'] },
   { id: 'RECHTLICHES', question: 'Sind Sie Eigentümer des Gebäudes?', options: ['Ja', 'Ja, Eigentümergemeinschaft', 'Nein'] },
   { id: 'EMAIL', question: 'Vielen Dank! Wie lautet Ihre E-Mail Adresse?', options: [] },
-  { id: 'PHONE', question: 'Unter welcher Telefonnummer können wir Sie erreichen?', options: [] },
-  { id: 'PLZ_ORT', question: 'Wie lautet Ihre Postleitzahl und Ort?', options: [] },
+  { id: 'PHONE', question: 'Unter welcher Telefonnummer können wir Sie erreichen? (Optional)', options: ['Überspringen'] },
+  { id: 'PLZ_ORT', question: 'Wie lautet Ihre Postleitzahl und Ort? (Optional)', options: ['Überspringen'] },
   { id: 'STREET', question: 'Wie lautet Ihre Straße und Hausnummer?', options: [] }
 ];
 
@@ -88,7 +88,7 @@ export default function GoldyChatAssistant() {
       }
 
       // 2. Validation for Multiple Choice Options
-      if (stepInfo.options && stepInfo.options.length > 0) {
+      if (stepInfo.options && stepInfo.options.length > 0 && !['PHONE', 'PLZ_ORT'].includes(stepInfo.id)) {
         const matchedOption = stepInfo.options.find(opt => opt.toLowerCase() === text.toLowerCase());
         if (!matchedOption) {
           addBotMessage("Ich bin ein intelligenter Assistent, der nur auf die Dienste dieser Seite spezialisiert ist. Bitte wählen Sie eine der folgenden Optionen:", stepInfo.options);

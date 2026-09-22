@@ -40,7 +40,7 @@ export default function HomePage() {
           <div
             style={{
               position: 'absolute',
-              right: '18%',
+              right: '15%',
               bottom: '10%',
               width: '260px',
               height: '340px',
@@ -80,7 +80,7 @@ export default function HomePage() {
             style={{
               position: 'absolute',
               left: '20%',
-              bottom: '-35px',
+              bottom: '-15px',
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',

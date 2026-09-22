@@ -53,7 +53,7 @@ export default function AnfragePage() {
     dacheindeckung: '',
     dachflaeche: '',
     eigentuemer: '',
-    anrede: 'Herr',
+    anrede: 'Privat',
     vorname: '',
     nachname: '',
     email: '',
@@ -83,7 +83,7 @@ export default function AnfragePage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.vorname || !formData.nachname || !formData.email || !formData.telefon) {
+    if (!formData.vorname || !formData.nachname || !formData.email) {
       setErrorMessage('Bitte füllen Sie alle Pflichtfelder aus.');
       return;
     }
@@ -881,9 +881,7 @@ export default function AnfragePage() {
                     onChange={(e) => setFormData({ ...formData, anrede: e.target.value })}
                     style={{ width: '100%', padding: '12px 14px', borderRadius: '12px', border: '1.5px solid #CBD5E1', fontSize: '14px', color: '#0E2841', background: '#FFFFFF' }}
                   >
-                    <option value="Herr">Herr</option>
-                    <option value="Frau">Frau</option>
-                    <option value="Divers">Divers</option>
+                    <option value="Privat">Privat</option>
                     <option value="Firma">Firma</option>
                   </select>
                 </div>
@@ -929,10 +927,9 @@ export default function AnfragePage() {
 
                 {/* Telefon */}
                 <div>
-                  <label style={{ display: 'block', fontSize: '13px', fontWeight: 700, color: '#0E2841', marginBottom: '6px' }}>Telefonnummer *</label>
+                  <label style={{ display: 'block', fontSize: '13px', fontWeight: 700, color: '#0E2841', marginBottom: '6px' }}>Telefonnummer (optional)</label>
                   <input
                     type="tel"
-                    required
                     placeholder="+49 170 1234567"
                     value={formData.telefon}
                     onChange={(e) => setFormData({ ...formData, telefon: e.target.value })}
@@ -942,10 +939,9 @@ export default function AnfragePage() {
 
                 {/* PLZ & Ort */}
                 <div>
-                  <label style={{ display: 'block', fontSize: '13px', fontWeight: 700, color: '#0E2841', marginBottom: '6px' }}>PLZ & Ort *</label>
+                  <label style={{ display: 'block', fontSize: '13px', fontWeight: 700, color: '#0E2841', marginBottom: '6px' }}>PLZ & Ort (optional)</label>
                   <input
                     type="text"
-                    required
                     placeholder="69115 Heidelberg"
                     value={formData.plzOrt}
                     onChange={(e) => setFormData({ ...formData, plzOrt: e.target.value })}
