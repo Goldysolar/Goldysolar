@@ -9,21 +9,7 @@ export default function AboutPage() {
         
         {/* Abschnitts-Überschrift (Merged from top) */}
         <div style={{ textAlign: 'center', marginBottom: '52px' }}>
-          <span
-            style={{
-              display: 'inline-block',
-              background: 'rgba(66, 133, 244, 0.1)',
-              color: '#4285F4',
-              border: '1px solid rgba(66, 133, 244, 0.25)',
-              fontSize: '12px',
-              fontWeight: 800,
-              padding: '4px 16px',
-              borderRadius: '9999px',
-              letterSpacing: '1px',
-              textTransform: 'uppercase',
-              marginBottom: '14px',
-            }}
-          >
+          <span className="category-pill">
             ÜBER UNS
           </span>
           <h1

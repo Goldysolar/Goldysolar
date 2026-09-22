@@ -54,15 +54,6 @@ const projektBilder = [
     tagColor: '#16A34A',
   },
   {
-    id: 6,
-    src: '/projekt-6.jpg',
-    alt: 'Projektübersicht – Wechselrichter und Speicher',
-    titel: 'Komplettsystem – Wechselrichter & Speicher',
-    beschreibung: 'Übersichtliche Installation von Wechselrichter, Batteriespeicher und Zählerschrank in einem Technikraum.',
-    tag: 'Systemintegration',
-    tagColor: '#0F4761',
-  },
-  {
     id: 7,
     src: '/projekt-7.jpg',
     alt: 'Solaranlage',
@@ -122,21 +113,7 @@ export default function ProjectsPage() {
 
           {/* Abschnitts-Überschrift */}
           <div style={{ textAlign: 'center', marginBottom: '52px' }}>
-            <span
-              style={{
-                display: 'inline-block',
-                background: 'rgba(66, 133, 244, 0.1)',
-                color: '#4285F4',
-                border: '1px solid rgba(66, 133, 244, 0.25)',
-                fontSize: '11.5px',
-                fontWeight: 800,
-                padding: '4px 16px',
-                borderRadius: '9999px',
-                letterSpacing: '1px',
-                textTransform: 'uppercase',
-                marginBottom: '14px',
-              }}
-            >
+            <span className="category-pill">
               Unsere Arbeiten
             </span>
             <h2

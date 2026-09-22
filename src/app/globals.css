@@ -437,12 +437,22 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(180deg, #4FA4F4 0%, #7AC1F7 45%, #9CD6F9 60%, #FFFFFF 100%);
   overflow: hidden;
   padding: 95px 0 135px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-content-inner {
   max-width: 750px;
-  padding-top: 15px;
-  padding-bottom: 25px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 0;
+  padding-bottom: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hero-stat-widget-desktop {
@@ -476,6 +486,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero-company-title {
   display: flex;
   align-items: baseline;
+  justify-content: center;
   gap: 12px;
   flex-wrap: wrap;
   margin-bottom: 16px;
@@ -514,7 +525,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 800;
   color: #FFD700;
   line-height: 1.4;
-  margin-bottom: 28px;
+  margin-bottom: 40px;
   letter-spacing: 0.3px;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
 }
@@ -555,47 +566,26 @@ h1, h2, h3, h4, h5, h6 {
 .hero-cta-button {
   display: inline-flex;
   align-items: center;
-  gap: 16px;
-  background: #FFFFFF;
-  color: #0F4761;
+  gap: 0;
+  background: var(--color-gold-yellow);
+  color: #000000;
   font-size: 16.5px;
   font-weight: 800;
   letter-spacing: 0.2px;
-  padding: 14px 18px 14px 34px;
+  padding: 14px 40px;
   border-radius: 9999px;
-  border: 2px solid rgba(255, 255, 255, 0.95);
-  box-shadow: 0 12px 30px rgba(15, 71, 97, 0.25), 0 4px 10px rgba(0, 0, 0, 0.08);
+  border: none;
+  box-shadow: 0 4px 14px rgba(255, 215, 0, 0.35);
   text-decoration: none;
   transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
 }
 
 .hero-cta-button:hover {
-  background: #FFFFFF;
-  color: #4285F4;
+  background: var(--color-gold-yellow-hover);
+  color: #000000;
   transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 18px 40px rgba(15, 71, 97, 0.35), 0 6px 16px rgba(66, 133, 244, 0.22);
-}
-
-.hero-cta-icon-wrapper {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #FFD700 0%, #FFAE00 100%);
-  color: #0F4761;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.45);
-  transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
-  flex-shrink: 0;
-}
-
-.hero-cta-button:hover .hero-cta-icon-wrapper {
-  transform: translateX(4px) scale(1.06);
-  background: linear-gradient(135deg, #4285F4 0%, #156082 100%);
-  color: #FFFFFF;
-  box-shadow: 0 4px 14px rgba(66, 133, 244, 0.45);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
 }
 
 /* Wiesen-Landschaft Hintergrund */
@@ -1968,5 +1958,21 @@ h1, h2, h3, h4, h5, h6 {
   .section-header h2 {
     font-size: clamp(14px, 4.5vw, 28px) !important;
     white-space: nowrap !important;
+  }
+}
+
+/* ── Warum GOLDY SOLAR Cards Grid ── */
+.warum-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (max-width: 640px) {
+  .warum-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
   }
 }

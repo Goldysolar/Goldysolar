@@ -13,7 +13,6 @@ import {
   Factory,
   Wind,
   Check,
-  TrendingUp,
 } from 'lucide-react';
 
 export default function HomePage() {
@@ -109,8 +108,8 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Hero Inhalt Links */}
-        <div className="container" style={{ position: 'relative', zIndex: 6 }}>
+        {/* Hero Inhalt */}
+        <div className="container" style={{ position: 'relative', zIndex: 6, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
           
           <div className="hero-content-inner">
             {/* Firmenname Prominent mit transparentem GmbH gleicher Schriftgröße */}
@@ -133,67 +132,13 @@ export default function HomePage() {
               Ihr Fachbetrieb für Photovoltaik
             </p>
 
-            {/* 3 Punkte unter dem Untertitel mit zusätzlichem vertikalen Abstand */}
-            <ul className="hero-features-list">
-              <li className="hero-feature-item">
-                <div className="hero-feature-icon">
-                  <Check size={14} strokeWidth={3} />
-                </div>
-                <span>Von der ersten Beratung bis zur fachgerechten Installation und Inbetriebnahme.</span>
-              </li>
-              <li className="hero-feature-item">
-                <div className="hero-feature-icon">
-                  <Check size={14} strokeWidth={3} />
-                </div>
-                <span>Ob Eigenheim, Gewerbebetrieb oder Solarpark: Wir liefern zuverlässige Lösungen.</span>
-              </li>
-              <li className="hero-feature-item">
-                <div className="hero-feature-icon">
-                  <Check size={14} strokeWidth={3} />
-                </div>
-                <span>Zuverlässige Lösungen für eine sichere und nachhaltige Energieversorgung.</span>
-              </li>
-            </ul>
 
-            {/* Professioneller Hero CTA Button mit ausgewogenen Dimensionen */}
+
+            {/* Hero CTA Button */}
             <div>
               <Link href="/anfrage" className="hero-cta-button">
                 <span>1 Minute Anfrage</span>
-                <div className="hero-cta-icon-wrapper">
-                  <ArrowRight size={20} strokeWidth={2.5} />
-                </div>
               </Link>
-            </div>
-          </div>
-
-          {/* Realistische Deutschland Solar-Statistik 2026 (Desktop Widget) */}
-          <div className="hero-stat-widget-desktop">
-            <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-              <div
-                style={{
-                  width: '42px',
-                  height: '42px',
-                  background: 'rgba(66, 133, 244, 0.1)',
-                  borderRadius: '10px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  flexShrink: 0,
-                }}
-              >
-                <TrendingUp size={22} color="#4285F4" />
-              </div>
-              <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                <div style={{ fontSize: '10.5px', color: '#8898AA', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '3px' }}>
-                  Stand 2026
-                </div>
-                <div style={{ fontSize: '18px', fontWeight: 900, color: '#0E2841', lineHeight: 1 }}>
-                  5,2 Mio.<span style={{ color: '#FFD700' }}>+</span> <span style={{ fontSize: '15px' }}>Anlagen</span>
-                </div>
-                <div style={{ fontSize: '11.5px', color: '#64748B', fontWeight: 500, marginTop: '4px' }}>
-                  bei Haushalten & Unternehmen
-                </div>
-              </div>
             </div>
           </div>
 
@@ -362,13 +307,13 @@ export default function HomePage() {
             <span className="category-pill">
               WARUM GOLDY SOLAR
             </span>
-            <h3 style={{ fontSize: 'clamp(12px, 3.8vw, 32px)', fontWeight: 900, lineHeight: 1.25, marginTop: '16px', color: '#FFD700', whiteSpace: 'nowrap' }}>
+            <h3 style={{ fontSize: 'clamp(18px, 4vw, 32px)', fontWeight: 900, lineHeight: 1.25, marginTop: '16px', color: '#FFD700' }}>
               Über 15 Jahre Erfahrung in PV-Technik
             </h3>
           </div>
 
           {/* 4 Feature Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '20px', maxWidth: '900px', margin: '0 auto' }}>
+          <div className="warum-cards-grid">
             {[
               { title: 'Alles aus einer Hand', desc: 'Von der Planung bis zur Inbetriebnahme.' },
               { title: 'Ingenieurwissen trifft Handwerk', desc: 'Praxisnahe Lösungen auf Basis langjähriger Erfahrung.' },
