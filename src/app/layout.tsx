@@ -4,6 +4,7 @@ import './globals.css';
 import Header from '@/components/common/Header';
 import Footer from '@/components/common/Footer';
 import GoldyChatAssistant from '@/components/common/GoldyChatAssistant';
+import CookieConsent from '@/components/common/CookieConsent';
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -44,6 +45,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <GoldyChatAssistant />
+        <CookieConsent />
       </body>
     </html>
   );

@@ -3,39 +3,73 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Impressum | Goldy Solar GmbH',
+  description: 'Impressum und rechtliche Hinweise der Goldy Solar GmbH',
 };
 
 export default function ImpressumPage() {
   return (
-    <div className="container" style={{ paddingTop: '100px', paddingBottom: '100px', minHeight: '60vh' }}>
-      <h1 style={{ fontSize: '36px', fontWeight: 900, marginBottom: '40px', color: '#0F4761' }}>IMPRESSUM</h1>
+    <div className="container" style={{ paddingTop: '80px', paddingBottom: '100px', maxWidth: '800px' }}>
+      <h1 style={{ fontSize: '36px', fontWeight: 900, marginBottom: '40px', color: '#0F4761' }}>Impressum</h1>
       
-      <div style={{ fontSize: '18px', lineHeight: 1.8, color: '#404040' }}>
-        <p style={{ marginBottom: '20px' }}><strong>Angaben gemäß § 5 TMG</strong></p>
-        
+      <div style={{ fontSize: '16px', lineHeight: 1.8, color: '#404040' }}>
+        <h2 style={{ fontSize: '20px', fontWeight: 800, marginTop: '30px', marginBottom: '12px', color: '#0E2841' }}>
+          Angaben gemäß § 5 Digitale-Dienste-Gesetz (DDG)
+        </h2>
         <p style={{ marginBottom: '20px' }}>
-          Goldy Solar GmbH<br />
+          <strong>Goldy Solar GmbH</strong><br />
           Rudolf-Diesel-Straße 11<br />
           69115 Heidelberg<br />
           Deutschland
         </p>
 
         <p style={{ marginBottom: '20px' }}>
-          Geschäftsführer: Sabah Altaweel<br />
+          <strong>Vertretungsberechtigte Person(en):</strong><br />
+          Vertreten durch den Geschäftsführer: Sabah Altaweel
+        </p>
+
+        <h2 style={{ fontSize: '20px', fontWeight: 800, marginTop: '30px', marginBottom: '12px', color: '#0E2841' }}>
+          Kontakt
+        </h2>
+        <p style={{ marginBottom: '20px' }}>
           Telefon: +49 6221 502 6666<br />
           E-Mail: info@goldysolar.de
         </p>
 
+        <h2 style={{ fontSize: '20px', fontWeight: 800, marginTop: '30px', marginBottom: '12px', color: '#0E2841' }}>
+          Registereintrag
+        </h2>
         <p style={{ marginBottom: '20px' }}>
-          Handelsregister: HRB 750394, Amtsgericht Mannheim<br />
-          USt-IdNr.: DE367592744
+          Eintragung im Handelsregister.<br />
+          Registergericht: Amtsgericht Mannheim<br />
+          Registernummer: HRB 750394
         </p>
 
+        <h2 style={{ fontSize: '20px', fontWeight: 800, marginTop: '30px', marginBottom: '12px', color: '#0E2841' }}>
+          Umsatzsteuer-Identifikationsnummer
+        </h2>
         <p style={{ marginBottom: '20px' }}>
-          <strong>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:</strong><br />
+          Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz (UStG):<br />
+          DE367592744
+        </p>
+
+        <h2 style={{ fontSize: '20px', fontWeight: 800, marginTop: '30px', marginBottom: '12px', color: '#0E2841' }}>
+          Verantwortlich für den Inhalt nach § 18 Abs. 2 Medienstaatsvertrag (MStV)
+        </h2>
+        <p style={{ marginBottom: '20px' }}>
           Sabah Altaweel<br />
           Rudolf-Diesel-Straße 11<br />
           69115 Heidelberg
+        </p>
+
+        <h2 style={{ fontSize: '20px', fontWeight: 800, marginTop: '30px', marginBottom: '12px', color: '#0E2841' }}>
+          EU-Streitbeilegung & Verbraucherstreitbeilegung
+        </h2>
+        <p style={{ marginBottom: '12px' }}>
+          Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer" style={{ color: '#4285F4', textDecoration: 'underline' }}>https://ec.europa.eu/consumers/odr</a>.<br />
+          Unsere E-Mail-Adresse finden Sie oben im Impressum.
+        </p>
+        <p style={{ marginBottom: '20px' }}>
+          Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle gemäß § 36 Verbraucherstreitbeilegungsgesetz (VSBG) teilzunehmen.
         </p>
       </div>
     </div>

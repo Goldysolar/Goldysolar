@@ -106,8 +106,15 @@ export default function Footer() {
               © {new Date().getFullYear()} Goldy Solar GmbH. Alle Rechte vorbehalten.
             </span>
             <div style={{ display: 'flex', gap: '18px' }}>
+              <Link href="/agb" style={{ color: '#CBE6F4', fontSize: '12.5px', textDecoration: 'none' }}>AGB</Link>
               <Link href="/impressum" style={{ color: '#CBE6F4', fontSize: '12.5px', textDecoration: 'none' }}>Impressum</Link>
               <Link href="/datenschutz" style={{ color: '#CBE6F4', fontSize: '12.5px', textDecoration: 'none' }}>Datenschutz</Link>
+              <button 
+                onClick={() => (window as any).openCookieSettings?.()} 
+                style={{ background: 'none', border: 'none', color: '#CBE6F4', fontSize: '12.5px', cursor: 'pointer', padding: 0 }}
+              >
+                Cookie-Einstellungen
+              </button>
             </div>
           </div>
 
