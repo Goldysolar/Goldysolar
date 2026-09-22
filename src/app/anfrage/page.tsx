@@ -87,10 +87,26 @@ export default function AnfragePage() {
       setErrorMessage('Bitte füllen Sie alle Pflichtfelder aus.');
       return;
     }
+    // Email Domain Validation
+    const validDomains = ['gmail.com', 'googlemail.com', 'outlook.com', 'outlook.de', 'hotmail.com', 'hotmail.de', 'live.com', 'live.de', 'yahoo.com', 'yahoo.de', 'gmx.de', 'gmx.net', 'web.de', 't-online.de', 'icloud.com', 'me.com', 'mac.com', 'freenet.de', 'protonmail.com', 'proton.me', 'mail.com', 'mail.de', 'aol.com'];
+    const domain = formData.email.toLowerCase().split('@')[1];
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email) || !domain || !validDomains.includes(domain)) {
+      setErrorMessage("Bitte geben Sie eine gültige E-Mail Adresse eines bekannten Anbieters ein (z.B. gmail, gmx, web.de, outlook, yahoo).");
+      return;
+    }
+
     if (!formData.privacyAccepted) {
       setErrorMessage('Bitte akzeptieren Sie die Datenschutzhinweise.');
       return;
     }
+
+    // Rate limiting
+    const lastSub = localStorage.getItem('last_anfrage_submission');
+    if (lastSub && Date.now() - parseInt(lastSub) < 60000) {
+      setErrorMessage("Bitte warten Sie eine Minute, bevor Sie eine neue Anfrage senden.");
+      return;
+    }
+    localStorage.setItem('last_anfrage_submission', Date.now().toString());
 
     setIsSubmitting(true);
     setErrorMessage('');

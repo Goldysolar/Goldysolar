@@ -98,9 +98,13 @@ export default function GoldyChatAssistant() {
       } 
       // 3. Validation for Text Inputs
       else {
-        if (stepInfo.id === 'EMAIL' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(text)) {
-          addBotMessage("Bitte geben Sie eine gültige E-Mail Adresse ein.");
-          return;
+        if (stepInfo.id === 'EMAIL') {
+          const validDomains = ['gmail.com', 'googlemail.com', 'outlook.com', 'outlook.de', 'hotmail.com', 'hotmail.de', 'live.com', 'live.de', 'yahoo.com', 'yahoo.de', 'gmx.de', 'gmx.net', 'web.de', 't-online.de', 'icloud.com', 'me.com', 'mac.com', 'freenet.de', 'protonmail.com', 'proton.me', 'mail.com', 'mail.de', 'aol.com'];
+          const domain = text.toLowerCase().split('@')[1];
+          if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(text) || !domain || !validDomains.includes(domain)) {
+            addBotMessage("Bitte geben Sie eine gültige E-Mail Adresse eines bekannten Anbieters ein (z.B. gmail, gmx, web.de, outlook, yahoo).");
+            return;
+          }
         }
         newData[stepInfo.id.toLowerCase()] = text;
       }
@@ -119,6 +123,14 @@ export default function GoldyChatAssistant() {
         setIsSubmitting(true);
 
         try {
+          const lastSub = localStorage.getItem('last_chat_submission');
+          if (lastSub && Date.now() - parseInt(lastSub) < 60000) {
+            addBotMessage("Bitte warten Sie eine Minute, bevor Sie eine neue Anfrage senden.");
+            setIsSubmitting(false);
+            return;
+          }
+          localStorage.setItem('last_chat_submission', Date.now().toString());
+
           const res = await fetch('/api/contact', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
