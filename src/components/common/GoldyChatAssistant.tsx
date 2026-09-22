@@ -19,8 +19,7 @@ const STEPS = [
   { id: 'RECHTLICHES', question: 'Sind Sie Eigentümer des Gebäudes?', options: ['Ja', 'Ja, Eigentümergemeinschaft', 'Nein'] },
   { id: 'EMAIL', question: 'Vielen Dank! Wie lautet Ihre E-Mail Adresse?', options: [] },
   { id: 'PHONE', question: 'Unter welcher Telefonnummer können wir Sie erreichen? (Optional)', options: ['Überspringen'] },
-  { id: 'PLZ_ORT', question: 'Wie lautet Ihre Postleitzahl und Ort? (Optional)', options: ['Überspringen'] },
-  { id: 'STREET', question: 'Wie lautet Ihre Straße und Hausnummer?', options: [] }
+  { id: 'PLZ_ORT', question: 'Wie lautet Ihre Postleitzahl und Ort? (Optional)', options: ['Überspringen'] }
 ];
 
 export default function GoldyChatAssistant() {
@@ -139,7 +138,6 @@ export default function GoldyChatAssistant() {
               email: newData.email,
               phone: newData.phone,
               plzOrt: newData.plz_ort,
-              street: newData.street,
               gebaeudeart: newData.gebaeudeart,
               dachgeometrie: newData.dachgeometrie,
               dacheindeckung: newData.dacheindeckung,

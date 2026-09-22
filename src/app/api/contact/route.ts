@@ -18,7 +18,6 @@ export async function POST(request: Request) {
       email,
       phone,
       plzOrt,
-      street,
       gebaeudeart,
       dachgeometrie,
       dacheindeckung,
@@ -37,7 +36,6 @@ export async function POST(request: Request) {
         <p><strong>E-Mail:</strong> ${email}</p>
         <p><strong>Telefon:</strong> ${phone}</p>
         <p><strong>PLZ & Ort:</strong> ${plzOrt}</p>
-        <p><strong>Straße & Hausnummer:</strong> ${street}</p>
         
         <h3>Projektdetails</h3>
         <ul>

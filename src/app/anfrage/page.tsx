@@ -59,7 +59,6 @@ export default function AnfragePage() {
     email: '',
     telefon: '',
     plzOrt: '',
-    strasse: '',
     nachricht: '',
     privacyAccepted: true,
   });

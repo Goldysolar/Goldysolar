@@ -15,7 +15,6 @@ export async function POST(req: Request) {
       email,
       telefon,
       plzOrt,
-      strasse,
       nachricht,
     } = data;
 
@@ -59,7 +58,6 @@ export async function POST(req: Request) {
               <tr><td class="label">E-Mail:</td><td class="value"><a href="mailto:${email}" style="color: #4285F4; text-decoration: none; font-weight: 700;">${email}</a></td></tr>
               <tr><td class="label">Telefon:</td><td class="value"><a href="tel:${telefon}" style="color: #4285F4; text-decoration: none; font-weight: 700;">${telefon}</a></td></tr>
               <tr><td class="label">PLZ & Ort:</td><td class="value">${plzOrt || 'Nicht angegeben'}</td></tr>
-              <tr><td class="label">Straße & Nr.:</td><td class="value">${strasse || 'Nicht angegeben'}</td></tr>
             </table>
 
             <div class="section-title">🏠 Projektdaten & Dachanalyse</div>
