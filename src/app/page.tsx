@@ -28,23 +28,28 @@ import {
 
 const CustomSunLogo = ({ size = 110, color = '#FFD700' }: { size?: number, color?: string }) => (
   <svg width={size} height={size} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    {/* White background inside the sun ring */}
+    <circle cx="50" cy="50" r="29" fill="#FFFFFF" />
+    
+    {/* Floating Rays */}
     <g fill={color}>
-      <polygon points="50,0 40,24 60,24" />
-      <polygon points="50,0 40,24 60,24" transform="rotate(45 50 50)" />
-      <polygon points="50,0 40,24 60,24" transform="rotate(90 50 50)" />
-      <polygon points="50,0 40,24 60,24" transform="rotate(135 50 50)" />
-      <polygon points="50,0 40,24 60,24" transform="rotate(180 50 50)" />
-      <polygon points="50,0 40,24 60,24" transform="rotate(225 50 50)" />
-      <polygon points="50,0 40,24 60,24" transform="rotate(270 50 50)" />
-      <polygon points="50,0 40,24 60,24" transform="rotate(315 50 50)" />
+      {[0, 45, 90, 135, 180, 225, 270, 315].map((angle) => (
+        <polygon key={angle} points="50,0 42,17 58,17" transform={`rotate(${angle} 50 50)`} />
+      ))}
     </g>
-    <circle cx="50" cy="50" r="33" fill={color} />
-    <circle cx="50" cy="50" r="26" fill="#FFFFFF" />
-    <circle cx="50" cy="50" r="20" fill="none" stroke={color} strokeWidth="5" />
-    <path d="M 38 43 L 62 43 L 62 49 A 12 12 0 0 1 38 49 Z" fill={color} />
-    <rect x="42" y="32" width="4" height="11" fill={color} />
-    <rect x="54" y="32" width="4" height="11" fill={color} />
-    <rect x="48" y="61" width="4" height="7" fill={color} />
+    
+    {/* Single Yellow Ring */}
+    <circle cx="50" cy="50" r="25" fill="none" stroke={color} strokeWidth="8" />
+    
+    {/* Plug Body */}
+    <path d="M 38 46 L 62 46 L 62 52 A 12 12 0 0 1 38 52 Z" fill={color} />
+    
+    {/* Plug Prongs (disconnected from ring) */}
+    <rect x="42" y="34" width="4" height="12" fill={color} />
+    <rect x="54" y="34" width="4" height="12" fill={color} />
+    
+    {/* Plug Cord (connected to ring bottom inner edge) */}
+    <rect x="48" y="64" width="4" height="8" fill={color} />
   </svg>
 );
 
