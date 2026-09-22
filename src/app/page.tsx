@@ -29,7 +29,7 @@ import {
 const CustomSunLogo = ({ size = 110, color = '#FFD700' }: { size?: number, color?: string }) => (
   <svg width={size} height={size} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
     {/* White background inside the sun ring */}
-    <circle cx="50" cy="50" r="29" fill="#FFFFFF" />
+    <circle cx="50" cy="50" r="33" fill="#FFFFFF" />
     
     {/* Floating Rays */}
     <g fill={color}>
