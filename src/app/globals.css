@@ -1976,3 +1976,14 @@ h1, h2, h3, h4, h5, h6 {
     gap: 14px;
   }
 }
+
+/* Custom Utility for Mobile Visibility & Positioning */
+@media (max-width: 768px) {
+  .hide-on-mobile {
+    display: none !important;
+  }
+  .center-on-mobile {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+}

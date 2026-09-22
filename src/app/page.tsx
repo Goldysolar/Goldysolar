@@ -65,6 +65,7 @@ export default function HomePage() {
         <div className="hero-landscape-bg">
           {/* Geometrische Windrad-Illustration rechts */}
           <div
+            className="hide-on-mobile"
             style={{
               position: 'absolute',
               right: '15%',
@@ -104,6 +105,7 @@ export default function HomePage() {
 
           {/* Solar-Symbolik Visual */}
           <div
+            className="center-on-mobile"
             style={{
               position: 'absolute',
               left: '20%',
