@@ -80,7 +80,7 @@ export default function HomePage() {
             style={{
               position: 'absolute',
               left: '20%',
-              bottom: '-15px',
+              bottom: '5px',
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',

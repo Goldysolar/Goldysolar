@@ -73,8 +73,8 @@ export default function GoldyChatAssistant() {
     setTimeout(async () => {
       // 1. Validation for NAME
       if (stepInfo.id === 'NAME') {
-        if (!/^[a-zA-ZÄÖÜäöüß\s\-]{2,40}$/.test(text)) {
-          addBotMessage("Bitte geben Sie einen gültigen Namen ein (nur Buchstaben, max. 40 Zeichen).");
+        if (!/^[a-zA-ZÄÖÜäöüß\s\-]{2,40}$/.test(text) || !text.trim().includes(' ')) {
+          addBotMessage("Bitte geben Sie Ihren Vor- und Nachnamen ein (mit einem Leerzeichen dazwischen).");
           return;
         }
         const firstName = text.split(' ')[0];
@@ -137,7 +137,7 @@ export default function GoldyChatAssistant() {
           });
 
           if (res.ok) {
-            addBotMessage("Ihre Anfrage wurde erfolgreich gesendet! Unser Team wird sich in Kürze bei Ihnen melden.");
+            addBotMessage("Vielen Dank für Ihre Anfrage! Wir haben Ihre Daten erfolgreich erhalten und werden uns innerhalb von maximal 2 Tagen bei Ihnen melden.");
           } else {
             addBotMessage("Es gab leider ein Problem beim Senden. Bitte versuchen Sie es später erneut oder kontaktieren Sie uns direkt.");
           }
