@@ -100,7 +100,7 @@ export async function POST(req: Request) {
           Authorization: `Bearer ${resendApiKey}`,
         },
         body: JSON.stringify({
-          from: 'Goldy Solar Anfrage <onboarding@resend.dev>',
+          from: 'Goldy Solar Anfrage <info@goldysolar.de>',
           to: [recipientEmail],
           reply_to: email,
           subject: `⚡ Neue Solar-Anfrage von ${vorname} ${nachname} (${plzOrt || 'PV'})`,

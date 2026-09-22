@@ -28,8 +28,8 @@ export async function POST(request: Request) {
 
     // Send email using Resend
     const { data: emailData, error } = await resend.emails.send({
-      from: 'Glody Solar <onboarding@resend.dev>', // Update with a verified domain if available
-      to: process.env.CONTACT_EMAIL || 'info@glody-solar.de', // Update with company email
+      from: 'Goldy Solar <info@goldysolar.de>', // Update with a verified domain if available
+      to: process.env.CONTACT_EMAIL || 'info@goldysolar.de', // Update with company email
       subject: `Neue Anfrage von ${name}`,
       html: `
         <h2>Neue Projektanfrage via Chat-Assistent</h2>
