@@ -102,7 +102,7 @@ export default function HomePage() {
                 position: 'relative',
               }}
             >
-              <Sun size={86} color="#FFD700" style={{ position: 'absolute' }} />
+              <Sun size={86} color="#FFD700" fill="#FFFFFF" style={{ position: 'absolute' }} />
               <Plug size={40} color="#FFD700" style={{ position: 'absolute', zIndex: 2 }} />
             </div>
           </div>
