@@ -1987,3 +1987,50 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateX(-50%) !important;
   }
 }
+
+/* Datenschutz & Legal Pages HTML Content Styling */
+.legal-html-content h1 {
+  font-size: 32px;
+  font-weight: 800;
+  color: #0E2841;
+  margin-bottom: 24px;
+}
+.legal-html-content h2 {
+  font-size: 24px;
+  font-weight: 800;
+  color: #0E2841;
+  margin-top: 40px;
+  margin-bottom: 16px;
+}
+.legal-html-content h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0E2841;
+  margin-top: 32px;
+  margin-bottom: 12px;
+}
+.legal-html-content p {
+  font-size: 16px;
+  color: #404040;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+.legal-html-content ul {
+  list-style-type: disc;
+  margin-left: 24px;
+  margin-bottom: 24px;
+}
+.legal-html-content li {
+  font-size: 16px;
+  color: #404040;
+  line-height: 1.8;
+  margin-bottom: 8px;
+}
+.legal-html-content a {
+  color: #4285F4;
+  text-decoration: underline;
+}
+.legal-html-content strong {
+  font-weight: 700;
+  color: #0E2841;
+}
