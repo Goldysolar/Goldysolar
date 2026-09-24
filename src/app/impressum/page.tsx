@@ -13,22 +13,22 @@ export default function ImpressumPage() {
       
       <div style={{ fontSize: '16px', lineHeight: 1.8, color: '#404040' }}>
         <h2 style={{ fontSize: '20px', fontWeight: 800, marginTop: '30px', marginBottom: '12px', color: '#0E2841' }}>
-          Angaben gemäß § 5 Digitale-Dienste-Gesetz (DDG)
+          Angaben gemäß § 5 Digitale-Dienste-Gesetz (DDG):
         </h2>
         <p style={{ marginBottom: '20px' }}>
-          <strong>Goldy Solar GmbH</strong><br />
+          Goldy Solar GmbH<br />
           Rudolf-Diesel-Straße 11<br />
           69115 Heidelberg<br />
           Deutschland
         </p>
 
         <p style={{ marginBottom: '20px' }}>
-          <strong>Vertretungsberechtigte Person(en):</strong><br />
-          Vertreten durch den Geschäftsführer: Sabah Altaweel
+          <strong>Vertreten durch den Geschäftsführer:</strong><br />
+          Sabah Altaweel
         </p>
 
         <h2 style={{ fontSize: '20px', fontWeight: 800, marginTop: '30px', marginBottom: '12px', color: '#0E2841' }}>
-          Kontakt
+          Kontakt:
         </h2>
         <p style={{ marginBottom: '20px' }}>
           Telefon: +49 6221 502 6666<br />
@@ -36,7 +36,7 @@ export default function ImpressumPage() {
         </p>
 
         <h2 style={{ fontSize: '20px', fontWeight: 800, marginTop: '30px', marginBottom: '12px', color: '#0E2841' }}>
-          Registereintrag
+          Registereintrag:
         </h2>
         <p style={{ marginBottom: '20px' }}>
           Eintragung im Handelsregister.<br />
@@ -45,7 +45,7 @@ export default function ImpressumPage() {
         </p>
 
         <h2 style={{ fontSize: '20px', fontWeight: 800, marginTop: '30px', marginBottom: '12px', color: '#0E2841' }}>
-          Umsatzsteuer-Identifikationsnummer
+          Umsatzsteuer-Identifikationsnummer:
         </h2>
         <p style={{ marginBottom: '20px' }}>
           Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz (UStG):<br />
@@ -53,7 +53,7 @@ export default function ImpressumPage() {
         </p>
 
         <h2 style={{ fontSize: '20px', fontWeight: 800, marginTop: '30px', marginBottom: '12px', color: '#0E2841' }}>
-          Verantwortlich für den Inhalt nach § 18 Abs. 2 Medienstaatsvertrag (MStV)
+          Verantwortlich für den Inhalt nach § 18 Abs. 2 Medienstaatsvertrag (MStV):
         </h2>
         <p style={{ marginBottom: '20px' }}>
           Sabah Altaweel<br />
@@ -62,14 +62,19 @@ export default function ImpressumPage() {
         </p>
 
         <h2 style={{ fontSize: '20px', fontWeight: 800, marginTop: '30px', marginBottom: '12px', color: '#0E2841' }}>
-          EU-Streitbeilegung & Verbraucherstreitbeilegung
+          EU-Streitbeilegung:
         </h2>
-        <p style={{ marginBottom: '12px' }}>
-          Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer" style={{ color: '#4285F4', textDecoration: 'underline' }}>https://ec.europa.eu/consumers/odr</a>.<br />
+        <p style={{ marginBottom: '20px' }}>
+          Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:<br />
+          <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer" style={{ color: '#4285F4', textDecoration: 'underline' }}>https://ec.europa.eu/consumers/odr/</a><br />
           Unsere E-Mail-Adresse finden Sie oben im Impressum.
         </p>
+
+        <h2 style={{ fontSize: '20px', fontWeight: 800, marginTop: '30px', marginBottom: '12px', color: '#0E2841' }}>
+          Verbraucherstreitbeilegung / Universalschlichtungsstelle:
+        </h2>
         <p style={{ marginBottom: '20px' }}>
-          Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle gemäß § 36 Verbraucherstreitbeilegungsgesetz (VSBG) teilzunehmen.
+          Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
         </p>
       </div>
     </div>
