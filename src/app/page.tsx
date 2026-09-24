@@ -1,10 +1,23 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Goldy Solar GmbH | Photovoltaik  Solaranlagen in Heidelberg",
-  description: "Ihr Experte für Photovoltaik, Batteriespeicher und Solaranlagen für Eigenheim und Gewerbe in Heidelberg und ganz Deutschland. Fordern Sie jetzt ein Angebot an.",
-  keywords: ["Photovoltaik", "Solaranlagen", "Batteriespeicher", "Heidelberg", "Gewerbe Solar", "Goldy Solar"],
+  title: "Goldy Solar GmbH | Photovoltaik & Solaranlagen in Heidelberg",
+  description: "Ihr zertifizierter Experte für Photovoltaik, Batteriespeicher, Wallboxen und EPC-Montage in Heidelberg und deutschlandweit. Sichern Sie sich saubere Energie.",
+  keywords: ["Photovoltaik", "Solaranlagen", "Batteriespeicher", "Wallbox", "EPC Montage", "Heidelberg", "Gewerbe Solar", "Goldy Solar GmbH"],
   alternates: { canonical: "https://goldysolar.de/" },
+  openGraph: {
+    title: "Goldy Solar GmbH | Ihr Partner für Photovoltaik",
+    description: "Professionelle Planung und Installation von Photovoltaik, Batteriespeichern und Wallboxen für Eigenheim und Gewerbe.",
+    url: "https://goldysolar.de/",
+    siteName: "Goldy Solar GmbH",
+    locale: "de_DE",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Goldy Solar GmbH | Photovoltaik & Speichersysteme",
+    description: "Professionelle Solar-Lösungen für Eigenheim und Gewerbe in ganz Deutschland.",
+  },
 };
 
 import React from 'react';
