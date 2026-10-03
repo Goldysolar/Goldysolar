@@ -21,7 +21,7 @@ export default function Footer() {
   return (
     <footer style={{ position: 'relative', width: '100%', overflow: 'hidden' }}>
       {/* Top Accent Gradient Bar */}
-      <div style={{ height: '4px', width: '100%', background: 'linear-gradient(90deg, #4285F4 0%, #FFD700 50%, #FFFF00 100%)' }} />
+      <div style={{ height: '4px', width: '100%', background: 'linear-gradient(90deg, #4285F4 0%, #F7BA0B 50%, #FFFF00 100%)' }} />
 
       {/* TOP SECTION: Sleek White Bar with Centered Logo */}
       <div className="footer-logo-section">
@@ -42,7 +42,7 @@ export default function Footer() {
           <div className="footer-cols-grid">
             {/* Unternehmen */}
             <div>
-              <h4 style={{ fontSize: '15px', fontWeight: 800, color: '#FFD700', marginBottom: '16px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+              <h4 style={{ fontSize: '15px', fontWeight: 800, color: '#F7BA0B', marginBottom: '16px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
                 Unternehmen
               </h4>
               <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px', padding: 0, margin: 0 }}>
@@ -57,7 +57,7 @@ export default function Footer() {
 
             {/* Leistungen & Lösungen */}
             <div>
-              <h4 style={{ fontSize: '15px', fontWeight: 800, color: '#FFD700', marginBottom: '16px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+              <h4 style={{ fontSize: '15px', fontWeight: 800, color: '#F7BA0B', marginBottom: '16px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
                 Leistungen &amp; Lösungen
               </h4>
               <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '8px', padding: 0, margin: 0 }}>
@@ -73,25 +73,25 @@ export default function Footer() {
 
             {/* Kontakt */}
             <div>
-              <h4 style={{ fontSize: '15px', fontWeight: 800, color: '#FFD700', marginBottom: '16px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+              <h4 style={{ fontSize: '15px', fontWeight: 800, color: '#F7BA0B', marginBottom: '16px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
                 Kontakt
               </h4>
               <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '12px', padding: 0, margin: 0 }}>
                 <li style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
-                  <Mail size={16} color="#FFD700" style={{ flexShrink: 0, marginTop: '2px' }} />
+                  <Mail size={16} color="#F7BA0B" style={{ flexShrink: 0, marginTop: '2px' }} />
                   <a href={`mailto:${COMPANY_INFO.contact.email}`} style={{ color: '#EAF4FA', fontSize: '13px', textDecoration: 'none', wordBreak: 'break-all' }}>
                     {COMPANY_INFO.contact.email}
                   </a>
                 </li>
                 <li style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
-                  <Phone size={16} color="#FFD700" style={{ flexShrink: 0, marginTop: '2px' }} />
+                  <Phone size={16} color="#F7BA0B" style={{ flexShrink: 0, marginTop: '2px' }} />
                   <div style={{ color: '#EAF4FA', fontSize: '13px' }}>
                     Tel: <a href={`tel:${COMPANY_INFO.contact.phone.replace(/\s+/g, '')}`} style={{ color: '#FFFFFF', fontWeight: 700, textDecoration: 'none' }}>{COMPANY_INFO.contact.phoneDisplay}</a><br />
                     Mobil: <a href={`tel:${COMPANY_INFO.contact.mobile.replace(/\s+/g, '')}`} style={{ color: '#FFFFFF', fontWeight: 700, textDecoration: 'none' }}>{COMPANY_INFO.contact.mobileDisplay}</a>
                   </div>
                 </li>
                 <li style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
-                  <MapPin size={16} color="#FFD700" style={{ flexShrink: 0, marginTop: '2px' }} />
+                  <MapPin size={16} color="#F7BA0B" style={{ flexShrink: 0, marginTop: '2px' }} />
                   <div style={{ color: '#EAF4FA', fontSize: '13px' }}>
                     {COMPANY_INFO.address.street}<br />
                     {COMPANY_INFO.address.zip} {COMPANY_INFO.address.city}
@@ -107,7 +107,6 @@ export default function Footer() {
               © {new Date().getFullYear()} Goldy Solar GmbH. Alle Rechte vorbehalten.
             </span>
             <div style={{ display: 'flex', gap: '18px' }}>
-              <Link href="/agb" style={{ color: '#CBE6F4', fontSize: '12.5px', textDecoration: 'none' }}>AGB</Link>
               <Link href="/impressum" style={{ color: '#CBE6F4', fontSize: '12.5px', textDecoration: 'none' }}>Impressum</Link>
               <Link href="/datenschutz" style={{ color: '#CBE6F4', fontSize: '12.5px', textDecoration: 'none' }}>Datenschutz</Link>
               <button 

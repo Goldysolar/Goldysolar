@@ -19,7 +19,7 @@ export default function GoldyLogo({ theme = 'light', size = 'normal' }: GoldyLog
         textDecoration: 'none',
       }}
     >
-      {/* Geometrisches Infinity / Solar-Wellen-Symbol (Royal Blue #4285F4 & Gold #FFD700) */}
+      {/* Geometrisches Infinity / Solar-Wellen-Symbol (Royal Blue #4285F4 & Gold #F7BA0B) */}
       <svg
         width={size === 'large' ? '46' : '38'}
         height={size === 'large' ? '46' : '38'}
@@ -35,7 +35,7 @@ export default function GoldyLogo({ theme = 'light', size = 'normal' }: GoldyLog
           </linearGradient>
           <linearGradient id="logoGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stopColor="#FFFF00" />
-            <stop offset="100%" stopColor="#FFD700" />
+            <stop offset="100%" stopColor="#F7BA0B" />
           </linearGradient>
         </defs>
 
@@ -56,7 +56,7 @@ export default function GoldyLogo({ theme = 'light', size = 'normal' }: GoldyLog
         />
 
         {/* Sonnen-Zentrumspunkt */}
-        <circle cx="30" cy="30" r="4.5" fill="#FFD700" />
+        <circle cx="30" cy="30" r="4.5" fill="#F7BA0B" />
       </svg>
 
       {/* Schriftzug */}
@@ -78,7 +78,7 @@ export default function GoldyLogo({ theme = 'light', size = 'normal' }: GoldyLog
             fontSize: '10px',
             fontWeight: 700,
             letterSpacing: '1.6px',
-            color: isDark ? '#FFD700' : '#467886',
+            color: isDark ? '#F7BA0B' : '#467886',
             textTransform: 'uppercase',
             marginTop: '2px',
           }}

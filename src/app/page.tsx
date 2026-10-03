@@ -39,7 +39,7 @@ import {
   Plug,
 } from 'lucide-react';
 
-const CustomSunLogo = ({ size = 110, color = '#FFD700' }: { size?: number, color?: string }) => (
+const CustomSunLogo = ({ size = 110, color = '#F7BA0B' }: { size?: number, color?: string }) => (
   <svg width={size} height={size} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
     {/* White background inside the sun ring */}
     <circle cx="50" cy="50" r="33" fill="#FFFFFF" />
@@ -97,13 +97,13 @@ export default function HomePage() {
                 width: '120px',
                 height: '120px',
                 borderRadius: '50%',
-                border: '4px solid rgba(255, 215, 0, 0.4)',
+                border: '4px solid rgba(247, 186, 11, 0.4)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
               }}
             >
-              <Lightbulb size={72} color="#FFD700" style={{ filter: 'drop-shadow(0 0 15px rgba(255, 215, 0, 0.8))' }} />
+              <Lightbulb size={72} color="#F7BA0B" style={{ filter: 'drop-shadow(0 0 15px rgba(247, 186, 11, 0.8))' }} />
             </div>
             {/* Windrad-Turm */}
             <div
@@ -144,7 +144,7 @@ export default function HomePage() {
                 position: 'relative',
               }}
             >
-              <CustomSunLogo size={110} color="#FFD700" />
+              <CustomSunLogo size={110} color="#F7BA0B" />
             </div>
           </div>
         </div>
@@ -202,42 +202,32 @@ export default function HomePage() {
           <div className="customer-service-grid">
             {/* 1. Karte: Einfamilienhaus */}
             <article className="customer-service-card" style={{ display: 'flex', flexDirection: 'column' }}>
-              <Link href="/privatkunden" style={{ textDecoration: 'none', color: 'inherit', display: 'block', cursor: 'pointer' }}>
-                <div className="customer-card-header" style={{ padding: 0, height: '220px', position: 'relative', overflow: 'hidden' }}>
-                  <img
-                    src="/solar-haus.jpg"
-                    alt="Photovoltaik Einfamilienhaus"
-                    style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-                  />
-                  {/* Overlay gradient */}
-                  <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(15,71,97,0.85) 0%, rgba(15,71,97,0.2) 60%, transparent 100%)' }} />
-                  {/* Badge */}
-                  <div style={{ position: 'absolute', top: '14px', left: '14px' }}>
-                    <span style={{ background: 'rgba(255,255,255,0.22)', backdropFilter: 'blur(6px)', color: '#FFFFFF', fontSize: '11px', fontWeight: 800, padding: '4px 12px', borderRadius: '9999px', textTransform: 'uppercase' as const }}>
-                      Privatkunden
-                    </span>
-                  </div>
-                  {/* Title overlay */}
-                  <div style={{ position: 'absolute', bottom: '16px', left: '16px', right: '16px' }}>
-                    <h3 style={{ fontSize: '22px', fontWeight: 900, color: '#FFFFFF', marginTop: '2px' }}>Einfamilienhaus</h3>
-                  </div>
+              <div className="customer-card-header" style={{ padding: 0, height: '220px', position: 'relative', overflow: 'hidden' }}>
+                <img
+                  src="/solar-haus.jpg"
+                  alt="Photovoltaik Einfamilienhaus"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+                {/* Overlay gradient */}
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(15,71,97,0.85) 0%, rgba(15,71,97,0.2) 60%, transparent 100%)' }} />
+                {/* Badge */}
+                <div style={{ position: 'absolute', top: '14px', left: '14px' }}>
+                  <span style={{ background: 'rgba(255,255,255,0.22)', backdropFilter: 'blur(6px)', color: '#FFFFFF', fontSize: '11px', fontWeight: 800, padding: '4px 12px', borderRadius: '9999px', textTransform: 'uppercase' as const }}>
+                    Privatkunden
+                  </span>
                 </div>
-              </Link>
+                {/* Title overlay */}
+                <div style={{ position: 'absolute', bottom: '16px', left: '16px', right: '16px' }}>
+                  <h3 style={{ fontSize: '22px', fontWeight: 900, color: '#FFFFFF', marginTop: '2px' }}>Einfamilienhaus</h3>
+                </div>
+              </div>
               <div className="customer-card-body" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', flex: 1 }}>
                 <div>
-                  <Link href="/privatkunden" style={{ textDecoration: 'none', color: 'inherit' }}>
-                    <h4 className="customer-card-title" style={{ color: '#FFD700', cursor: 'pointer' }}>Photovoltaik für Ihr Zuhause</h4>
-                  </Link>
+                  <h4 className="customer-card-title" style={{ color: '#F7BA0B' }}>Photovoltaik für Ihr Zuhause</h4>
                   <p className="customer-card-desc">
                     Senken Sie Ihre monatlichen Stromkosten dauerhaft um bis zu 80% mit hochmodernen
                     Glas-Glas Solarmodulen, Batteriespeichern und Wallbox-Ladelösungen.
                   </p>
-                  <ul className="customer-card-features">
-                    <li><CheckCircle2 size={17} color="#4285F4" style={{ flexShrink: 0 }} /><span>Glas-Glas Module mit bis zu 30 Jahren Leistungsgarantie</span></li>
-                    <li><CheckCircle2 size={17} color="#4285F4" style={{ flexShrink: 0 }} /><span>Hochvolt-Batteriespeicher mit Notstrom-Automatik</span></li>
-                    <li><CheckCircle2 size={17} color="#4285F4" style={{ flexShrink: 0 }} /><span>Solares Überschussladen für E-Autos (Wallbox)</span></li>
-                    <li><CheckCircle2 size={17} color="#4285F4" style={{ flexShrink: 0 }} /><span>Zählerschrankmodernisierung &amp; Netzanmeldung inklusive</span></li>
-                  </ul>
                 </div>
                 <Link href="/anfrage" className="btn btn-gold" style={{ width: '100%', justifyContent: 'center', fontSize: '15px', fontWeight: 800, borderRadius: '9999px', padding: '14px 24px', marginTop: '16px' }}>
                   <span>1 Minute Anfrage</span>
@@ -248,39 +238,29 @@ export default function HomePage() {
 
             {/* 2. Karte: C&I (Commercial & Industrial) */}
             <article className="customer-service-card" style={{ display: 'flex', flexDirection: 'column' }}>
-              <Link href="/gewerbe-industrie" style={{ textDecoration: 'none', color: 'inherit', display: 'block', cursor: 'pointer' }}>
-                <div className="customer-card-header" style={{ padding: 0, height: '220px', position: 'relative', overflow: 'hidden' }}>
-                  <img
-                    src="/solar-ci.jpg"
-                    alt="Gewerbe und Industrie Solar"
-                    style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-                  />
-                  <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(15,71,97,0.85) 0%, rgba(15,71,97,0.2) 60%, transparent 100%)' }} />
-                  <div style={{ position: 'absolute', top: '14px', left: '14px' }}>
-                    <span style={{ background: 'rgba(255,255,255,0.22)', backdropFilter: 'blur(6px)', color: '#FFFFFF', fontSize: '11px', fontWeight: 800, padding: '4px 12px', borderRadius: '9999px', textTransform: 'uppercase' as const }}>
-                      Gewerbe &amp; Industrie
-                    </span>
-                  </div>
-                  <div style={{ position: 'absolute', bottom: '16px', left: '16px', right: '16px' }}>
-                    <h3 style={{ fontSize: '22px', fontWeight: 900, color: '#FFFFFF', marginTop: '2px' }}>C&amp;I</h3>
-                  </div>
+              <div className="customer-card-header" style={{ padding: 0, height: '220px', position: 'relative', overflow: 'hidden' }}>
+                <img
+                  src="/solar-ci.jpg"
+                  alt="Gewerbe und Industrie Solar"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(15,71,97,0.85) 0%, rgba(15,71,97,0.2) 60%, transparent 100%)' }} />
+                <div style={{ position: 'absolute', top: '14px', left: '14px' }}>
+                  <span style={{ background: 'rgba(255,255,255,0.22)', backdropFilter: 'blur(6px)', color: '#FFFFFF', fontSize: '11px', fontWeight: 800, padding: '4px 12px', borderRadius: '9999px', textTransform: 'uppercase' as const }}>
+                    Gewerbe &amp; Industrie
+                  </span>
                 </div>
-              </Link>
+                <div style={{ position: 'absolute', bottom: '16px', left: '16px', right: '16px' }}>
+                  <h3 style={{ fontSize: '22px', fontWeight: 900, color: '#FFFFFF', marginTop: '2px' }}>C&amp;I</h3>
+                </div>
+              </div>
               <div className="customer-card-body" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', flex: 1 }}>
                 <div>
-                  <Link href="/gewerbe-industrie" style={{ textDecoration: 'none', color: 'inherit' }}>
-                    <h4 className="customer-card-title" style={{ color: '#FFD700', cursor: 'pointer' }}>Solar &amp; Speicher für Unternehmen</h4>
-                  </Link>
+                  <h4 className="customer-card-title" style={{ color: '#F7BA0B' }}>Solar &amp; Speicher für Unternehmen</h4>
                   <p className="customer-card-desc">
                     Wirtschaftliche Großdachanlagen für Hallen, Betriebe und Logistikzentren zur gezielten
                     Lastspitzenkappung (Peak Shaving) und Verbesserung der CO2-Bilanz.
                   </p>
-                  <ul className="customer-card-features">
-                    <li><CheckCircle2 size={17} color="#4285F4" style={{ flexShrink: 0 }} /><span>Große Dachanlagen (50 kWp – 2+ MWp) auf Trapez- &amp; Flachdach</span></li>
-                    <li><CheckCircle2 size={17} color="#4285F4" style={{ flexShrink: 0 }} /><span>Gewerbespeicher zur Spitzenlastkappung (Peak Shaving)</span></li>
-                    <li><CheckCircle2 size={17} color="#4285F4" style={{ flexShrink: 0 }} /><span>Solar-Carports &amp; Ladeinfrastruktur für Firmenfuhrparks</span></li>
-                    <li><CheckCircle2 size={17} color="#4285F4" style={{ flexShrink: 0 }} /><span>Trafostationen, Wandlermessung &amp; Steuervorteile (AfA/IAB)</span></li>
-                  </ul>
                 </div>
                 <Link href="/anfrage" className="btn btn-gold" style={{ width: '100%', justifyContent: 'center', fontSize: '15px', fontWeight: 800, borderRadius: '9999px', padding: '14px 24px', marginTop: '16px' }}>
                   <span>1 Minute Anfrage</span>
@@ -291,39 +271,29 @@ export default function HomePage() {
 
             {/* 3. Karte: Solar Park Ingenieur (EPC & Utility) */}
             <article className="customer-service-card" style={{ display: 'flex', flexDirection: 'column' }}>
-              <Link href="/epc-utility" style={{ textDecoration: 'none', color: 'inherit', display: 'block', cursor: 'pointer' }}>
-                <div className="customer-card-header" style={{ padding: 0, height: '220px', position: 'relative', overflow: 'hidden' }}>
-                  <img
-                    src="/solar-park.jpg"
-                    alt="Solar Park Utility Scale"
-                    style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-                  />
-                  <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(14,40,65,0.85) 0%, rgba(14,40,65,0.2) 60%, transparent 100%)' }} />
-                  <div style={{ position: 'absolute', top: '14px', left: '14px' }}>
-                    <span style={{ background: 'rgba(255,255,255,0.22)', backdropFilter: 'blur(6px)', color: '#FFFFFF', fontSize: '11px', fontWeight: 800, padding: '4px 12px', borderRadius: '9999px', textTransform: 'uppercase' as const }}>
-                      EPC &amp; Megawatt
-                    </span>
-                  </div>
-                  <div style={{ position: 'absolute', bottom: '16px', left: '16px', right: '16px' }}>
-                    <h3 style={{ fontSize: '22px', fontWeight: 900, color: '#FFFFFF', marginTop: '2px' }}>Solar Park Ingenieur</h3>
-                  </div>
+              <div className="customer-card-header" style={{ padding: 0, height: '220px', position: 'relative', overflow: 'hidden' }}>
+                <img
+                  src="/solar-park.jpg"
+                  alt="Solar Park Utility Scale"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(14,40,65,0.85) 0%, rgba(14,40,65,0.2) 60%, transparent 100%)' }} />
+                <div style={{ position: 'absolute', top: '14px', left: '14px' }}>
+                  <span style={{ background: 'rgba(255,255,255,0.22)', backdropFilter: 'blur(6px)', color: '#FFFFFF', fontSize: '11px', fontWeight: 800, padding: '4px 12px', borderRadius: '9999px', textTransform: 'uppercase' as const }}>
+                    EPC &amp; Megawatt
+                  </span>
                 </div>
-              </Link>
+                <div style={{ position: 'absolute', bottom: '16px', left: '16px', right: '16px' }}>
+                  <h3 style={{ fontSize: '22px', fontWeight: 900, color: '#FFFFFF', marginTop: '2px' }}>Solar Park Ingenieur</h3>
+                </div>
+              </div>
               <div className="customer-card-body" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', flex: 1 }}>
                 <div>
-                  <Link href="/epc-utility" style={{ textDecoration: 'none', color: 'inherit' }}>
-                    <h4 className="customer-card-title" style={{ color: '#FFD700', cursor: 'pointer' }}>EPC &amp; Utility Scale Großprojekte</h4>
-                  </Link>
+                  <h4 className="customer-card-title" style={{ color: '#F7BA0B' }}>EPC &amp; Utility Scale Großprojekte</h4>
                   <p className="customer-card-desc">
                     Schlüsselfertiger Bau, Detail-Engineering und Mittelspannungsanbindung für Freiflächenanlagen,
                     Agri-PV und Megawatt-Solarparks unter deutscher Ingenieursleitung.
                   </p>
-                  <ul className="customer-card-features">
-                    <li><CheckCircle2 size={17} color="#4285F4" style={{ flexShrink: 0 }} /><span>Projektentwicklung, Ertragsprognosen (PVsyst) &amp; Machbarkeit</span></li>
-                    <li><CheckCircle2 size={17} color="#4285F4" style={{ flexShrink: 0 }} /><span>Turnkey EPC Generalunternehmer-Bau &amp; Bauüberwachung</span></li>
-                    <li><CheckCircle2 size={17} color="#4285F4" style={{ flexShrink: 0 }} /><span>Mittelspannungsanbindung nach VDE-AR-N 4110 / 4120</span></li>
-                    <li><CheckCircle2 size={17} color="#4285F4" style={{ flexShrink: 0 }} /><span>SCADA Parkregler (EZA), Schutzprüfung &amp; 24/7 O&amp;M Service</span></li>
-                  </ul>
                 </div>
                 <Link href="/anfrage" className="btn btn-gold" style={{ width: '100%', justifyContent: 'center', fontSize: '15px', fontWeight: 800, borderRadius: '9999px', padding: '14px 24px', marginTop: '16px' }}>
                   <span>1 Minute Anfrage</span>
@@ -348,7 +318,7 @@ export default function HomePage() {
             <span className="category-pill">
               WARUM GOLDY SOLAR
             </span>
-            <h3 style={{ fontSize: 'clamp(18px, 4vw, 32px)', fontWeight: 900, lineHeight: 1.25, marginTop: '16px', color: '#FFD700' }}>
+            <h3 style={{ fontSize: 'clamp(18px, 4vw, 32px)', fontWeight: 900, lineHeight: 1.25, marginTop: '16px', color: '#F7BA0B' }}>
               Über 15 Jahre Erfahrung in PV-Technik
             </h3>
           </div>
@@ -373,7 +343,7 @@ export default function HomePage() {
               }}>
                 <div style={{
                   width: '36px', height: '36px', borderRadius: '10px',
-                  background: 'rgba(255,215,0,0.15)', color: '#B28900',
+                  background: 'rgba(247, 186, 11, 0.15)', color: '#DEA70A',
                   display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0,
                 }}>
                   <CheckCircle2 size={20} />
@@ -390,7 +360,7 @@ export default function HomePage() {
           <div style={{ textAlign: 'center', marginTop: '32px' }}>
             <span style={{
               display: 'inline-flex', alignItems: 'center', gap: '8px',
-              background: '#0F4761', color: '#FFD700', fontWeight: 700,
+              background: '#0F4761', color: '#F7BA0B', fontWeight: 700,
               fontSize: '14px', padding: '10px 24px', borderRadius: '9999px',
             }}>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>

@@ -25,7 +25,7 @@ export default function PlugLeafIcon({ size = 80, className = '' }: PlugLeafIcon
 
         <linearGradient id="pinGradTS" x1="0%" y1="0%" x2="0%" y2="100%">
           <stop offset="0%" stopColor="#FFFF00" />
-          <stop offset="100%" stopColor="#FFD700" />
+          <stop offset="100%" stopColor="#F7BA0B" />
         </linearGradient>
 
         <linearGradient id="leafGradTS" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -49,7 +49,7 @@ export default function PlugLeafIcon({ size = 80, className = '' }: PlugLeafIcon
 
         <path
           d="M51 28L45 39H51L49 50L57 37H51L51 28Z"
-          fill="#FFD700"
+          fill="#F7BA0B"
         />
 
         <path

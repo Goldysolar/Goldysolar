@@ -175,15 +175,15 @@ export default function ServicesPage() {
           {/* Highlights-Balken */}
           <div className="service-highlight-bar">
             <div className="service-highlight-item">
-              <TrendingUp size={20} color="#FFD700" />
+              <TrendingUp size={20} color="#F7BA0B" />
               <span>Bis zu 80% Stromautarkie</span>
             </div>
             <div className="service-highlight-item">
-              <Award size={20} color="#FFD700" />
+              <Award size={20} color="#F7BA0B" />
               <span>25–30 Jahre Leistungsgarantie</span>
             </div>
             <div className="service-highlight-item">
-              <ShieldCheck size={20} color="#FFD700" />
+              <ShieldCheck size={20} color="#F7BA0B" />
               <span>100% schlüsselfertig aus Meisterhand</span>
             </div>
           </div>
@@ -194,8 +194,8 @@ export default function ServicesPage() {
               <span>Privatkunden-Angebot anfordern</span>
               <ArrowRight size={16} />
             </Link>
-            <Link href="/privatkunden" className="btn btn-outline-blue">
-              <span>Details zu Privatkunden anzeigen</span>
+            <Link href="/anfrage" className="btn btn-gold">
+              <span>1 Minute Anfrage</span>
               <ChevronRight size={16} />
             </Link>
           </div>
@@ -299,15 +299,15 @@ export default function ServicesPage() {
           {/* Highlights-Balken */}
           <div className="service-highlight-bar">
             <div className="service-highlight-item">
-              <TrendingUp size={20} color="#FFD700" />
+              <TrendingUp size={20} color="#F7BA0B" />
               <span>Bis zu 60% Senkung der Energiekosten</span>
             </div>
             <div className="service-highlight-item">
-              <Building2 size={20} color="#FFD700" />
+              <Building2 size={20} color="#F7BA0B" />
               <span>Montage im laufenden Betriebsablauf</span>
             </div>
             <div className="service-highlight-item">
-              <ShieldCheck size={20} color="#FFD700" />
+              <ShieldCheck size={20} color="#F7BA0B" />
               <span>VDE-AR-N 4110 Mittelspannungskonform</span>
             </div>
           </div>
@@ -318,8 +318,8 @@ export default function ServicesPage() {
               <span>Gewerbeprojekt unverbindlich anfragen</span>
               <ArrowRight size={16} />
             </Link>
-            <Link href="/gewerbe-industrie" className="btn btn-outline-blue">
-              <span>Details zu Gewerbe & Industrie anzeigen</span>
+            <Link href="/anfrage" className="btn btn-gold">
+              <span>1 Minute Anfrage</span>
               <ChevronRight size={16} />
             </Link>
           </div>
@@ -423,15 +423,15 @@ export default function ServicesPage() {
           {/* Highlights-Balken */}
           <div className="service-highlight-bar">
             <div className="service-highlight-item">
-              <Factory size={20} color="#FFD700" />
+              <Factory size={20} color="#F7BA0B" />
               <span>Megawatt-Kompetenz (1 MWp – 100+ MWp)</span>
             </div>
             <div className="service-highlight-item">
-              <ShieldCheck size={20} color="#FFD700" />
+              <ShieldCheck size={20} color="#F7BA0B" />
               <span>VDE-AR-N 4110 / 4120 Zertifiziert</span>
             </div>
             <div className="service-highlight-item">
-              <Award size={20} color="#FFD700" />
+              <Award size={20} color="#F7BA0B" />
               <span>Eigene Bauleiter & Elektroingenieure</span>
             </div>
           </div>
@@ -442,8 +442,8 @@ export default function ServicesPage() {
               <span>EPC-Großprojekt anfragen</span>
               <ArrowRight size={16} />
             </Link>
-            <Link href="/epc-utility" className="btn btn-outline-blue">
-              <span>Details zu EPC & Utility anzeigen</span>
+            <Link href="/anfrage" className="btn btn-gold">
+              <span>1 Minute Anfrage</span>
               <ChevronRight size={16} />
             </Link>
           </div>

@@ -142,12 +142,15 @@ export default function GoldyChatAssistant() {
               dachgeometrie: newData.dachgeometrie,
               dacheindeckung: newData.dacheindeckung,
               flaeche: newData.flaeche,
-              rechtliches: newData.rechtliches
+              rechtliches: newData.rechtliches,
+              website_url: '',
             })
           });
 
           if (res.ok) {
             addBotMessage("Vielen Dank für Ihre Anfrage! Wir haben Ihre Daten erfolgreich erhalten und werden uns innerhalb von maximal 2 Tagen bei Ihnen melden.");
+          } else if (res.status === 429) {
+            addBotMessage("Zu viele Anfragen. Bitte warten Sie 15 Minuten, bevor Sie eine neue Anfrage senden.");
           } else {
             addBotMessage("Es gab leider ein Problem beim Senden. Bitte versuchen Sie es später erneut oder kontaktieren Sie uns direkt.");
           }
@@ -166,8 +169,8 @@ export default function GoldyChatAssistant() {
         <button 
           onClick={() => setIsOpen(true)}
           style={{
-            backgroundColor: '#FFD700',
-            color: '#0F4761',
+            backgroundColor: '#F7BA0B',
+            color: '#4285F4',
             border: 'none',
             borderRadius: '50%',
             width: '64px',
@@ -192,7 +195,7 @@ export default function GoldyChatAssistant() {
           height: '550px',
           backgroundColor: '#FFFFFF',
           borderRadius: '20px',
-          boxShadow: '0 12px 40px rgba(15, 71, 97, 0.2)',
+          boxShadow: '0 12px 40px rgba(66, 133, 244, 0.18)',
           display: 'flex',
           flexDirection: 'column',
           overflow: 'hidden',
@@ -200,7 +203,7 @@ export default function GoldyChatAssistant() {
         }}>
           {/* Header */}
           <div style={{
-            backgroundColor: '#0F4761',
+            backgroundColor: '#4285F4',
             color: '#FFFFFF',
             padding: '18px 20px',
             display: 'flex',
@@ -208,12 +211,12 @@ export default function GoldyChatAssistant() {
             alignItems: 'center'
           }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-              <div style={{ background: '#FFD700', borderRadius: '50%', padding: '6px', color: '#0F4761' }}>
+              <div style={{ background: '#F7BA0B', borderRadius: '50%', padding: '6px', color: '#4285F4' }}>
                 <Bot size={22} />
               </div>
               <div>
                 <span style={{ fontWeight: 800, fontSize: '16px', display: 'block' }}>Goldy Assistent</span>
-                <span style={{ fontSize: '12px', color: '#CBD5E1' }}>Online</span>
+                <span style={{ fontSize: '12px', color: '#EAF4FA' }}>Online</span>
               </div>
             </div>
             <button 
@@ -239,13 +242,13 @@ export default function GoldyChatAssistant() {
                 
                 <div style={{ 
                   backgroundColor: msg.sender === 'user' ? '#4285F4' : '#FFFFFF',
-                  color: msg.sender === 'user' ? '#FFFFFF' : '#0F4761',
+                  color: msg.sender === 'user' ? '#FFFFFF' : '#0E2841',
                   padding: '12px 16px',
                   borderRadius: '16px',
                   maxWidth: '85%',
                   fontSize: '14.5px',
                   lineHeight: 1.5,
-                  boxShadow: msg.sender === 'bot' ? '0 2px 8px rgba(15, 71, 97, 0.06)' : 'none',
+                  boxShadow: msg.sender === 'bot' ? '0 2px 8px rgba(66, 133, 244, 0.08)' : 'none',
                   borderBottomRightRadius: msg.sender === 'user' ? '4px' : '16px',
                   borderBottomLeftRadius: msg.sender === 'bot' ? '4px' : '16px',
                 }}>
@@ -316,7 +319,7 @@ export default function GoldyChatAssistant() {
                 border: '1px solid #CBD5E1',
                 fontSize: '14.5px',
                 outline: 'none',
-                color: '#0F4761'
+                color: '#0E2841'
               }}
             />
             <button

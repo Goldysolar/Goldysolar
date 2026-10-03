@@ -18,24 +18,6 @@ const projektBilder = [
     tagColor: '#4285F4',
   },
   {
-    id: 2,
-    src: '/projekt-2.jpg',
-    alt: 'SMA Wechselrichter – Nahaufnahme Reihe',
-    titel: 'SMA Wechselrichter – Serieninstallation',
-    beschreibung: 'Parallele Installation mehrerer SMA Wechselrichter mit sauber geführter Verkabelung gemäß VDE-Standard.',
-    tag: 'Installation',
-    tagColor: '#4285F4',
-  },
-  {
-    id: 3,
-    src: '/projekt-3.jpg',
-    alt: 'Einzelner SMA Wechselrichter montiert',
-    titel: 'Einzelwechselrichter – Präzisionsausführung',
-    beschreibung: 'Einzelinstallation eines SMA Sunny Tripower mit professionellem Kabelmanagement und Schutzklasse IP65.',
-    tag: 'Präzision',
-    tagColor: '#0E2841',
-  },
-  {
     id: 4,
     src: '/projekt-4.jpg',
     alt: 'DC-Verkabelung mit MC4-Steckern beschriftet',
@@ -95,9 +77,9 @@ const projektBilder = [
    Statistik-Zahlen
    ───────────────────────────────────────────── */
 const stats = [
-  { icon: <Sun size={22} color="#FFD700" />, wert: '15+', label: 'Jahre Erfahrung' },
+  { icon: <Sun size={22} color="#F7BA0B" />, wert: '15+', label: 'Jahre Erfahrung' },
   { icon: <Building2 size={22} color="#4285F4" />, wert: '200+', label: 'Realisierte Projekte' },
-  { icon: <Zap size={22} color="#FFD700" />, wert: '5 MWp+', label: 'Installierte Leistung' },
+  { icon: <Zap size={22} color="#F7BA0B" />, wert: '5 MWp+', label: 'Installierte Leistung' },
   { icon: <Award size={22} color="#4285F4" />, wert: '100%', label: 'VDE-Konformität' },
 ];
 
@@ -120,13 +102,12 @@ export default function ProjectsPage() {
               style={{
                 fontSize: 'clamp(24px, 3vw, 34px)',
                 fontWeight: 900,
-                color: '#0E2841',
+                color: '#F7BA0B',
                 lineHeight: 1.25,
                 marginBottom: '10px',
               }}
             >
-              Jedes Projekt – ein Zeichen{' '}
-              <span style={{ color: '#FFD700' }}>unserer Qualität</span>
+              Jedes Projekt – ein Zeichen unserer Qualität
             </h2>
             <p style={{ fontSize: '15px', color: '#64748B', maxWidth: '520px', margin: '0 auto', lineHeight: 1.6 }}>
               Alle Anlagen wurden nach aktuellen VDE-Richtlinien und höchsten Qualitätsstandards realisiert.
@@ -325,7 +306,7 @@ export default function ProjectsPage() {
             fontWeight: 800, 
             borderRadius: '9999px', 
             padding: '16px 36px',
-            boxShadow: '0 4px 14px rgba(255, 215, 0, 0.3)'
+            boxShadow: '0 4px 14px rgba(247, 186, 11, 0.3)'
           }}
         >
           <span>1 Minute Anfrage</span>

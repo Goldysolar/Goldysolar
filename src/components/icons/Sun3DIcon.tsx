@@ -19,7 +19,7 @@ export default function Sun3DIcon({ size = 80, className = '' }: Sun3DIconProps)
       <defs>
         <radialGradient id="sunCenterGradTS" cx="35%" cy="30%" r="70%">
           <stop offset="0%" stopColor="#FFF4A3" />
-          <stop offset="35%" stopColor="#FFD700" />
+          <stop offset="35%" stopColor="#F7BA0B" />
           <stop offset="80%" stopColor="#F59E0B" />
           <stop offset="100%" stopColor="#D97706" />
         </radialGradient>

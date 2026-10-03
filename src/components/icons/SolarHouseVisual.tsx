@@ -36,19 +36,19 @@ export default function SolarHouseVisual() {
           <stop offset="100%" stopColor="#E2E8F0" stopOpacity="0.85" />
         </linearGradient>
         <linearGradient id="sunGlow" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#FFD700" stopOpacity="0.9" />
+          <stop offset="0%" stopColor="#F7BA0B" stopOpacity="0.9" />
           <stop offset="100%" stopColor="#FFA500" stopOpacity="0" />
         </linearGradient>
       </defs>
 
       {/* Sun glow in background */}
       <circle cx="330" cy="40" r="32" fill="url(#sunGlow)" />
-      <circle cx="330" cy="40" r="16" fill="#FFD700" />
+      <circle cx="330" cy="40" r="16" fill="#F7BA0B" />
       {/* Sun rays */}
-      <line x1="330" y1="12" x2="330" y2="4" stroke="#FFD700" strokeWidth="2.5" strokeLinecap="round" />
-      <line x1="358" y1="40" x2="366" y2="40" stroke="#FFD700" strokeWidth="2.5" strokeLinecap="round" />
-      <line x1="350" y1="20" x2="356" y2="14" stroke="#FFD700" strokeWidth="2.5" strokeLinecap="round" />
-      <line x1="310" y1="20" x2="304" y2="14" stroke="#FFD700" strokeWidth="2.5" strokeLinecap="round" />
+      <line x1="330" y1="12" x2="330" y2="4" stroke="#F7BA0B" strokeWidth="2.5" strokeLinecap="round" />
+      <line x1="358" y1="40" x2="366" y2="40" stroke="#F7BA0B" strokeWidth="2.5" strokeLinecap="round" />
+      <line x1="350" y1="20" x2="356" y2="14" stroke="#F7BA0B" strokeWidth="2.5" strokeLinecap="round" />
+      <line x1="310" y1="20" x2="304" y2="14" stroke="#F7BA0B" strokeWidth="2.5" strokeLinecap="round" />
 
       {/* Ground & Grass hill */}
       <ellipse cx="250" cy="230" rx="190" ry="45" fill="#156082" fillOpacity="0.7" />
@@ -86,7 +86,7 @@ export default function SolarHouseVisual() {
 
       {/* Front Entrance & Smart Door */}
       <rect x="275" y="138" width="28" height="62" rx="2" fill="#1E293B" />
-      <circle cx="297" cy="170" r="2" fill="#FFD700" />
+      <circle cx="297" cy="170" r="2" fill="#F7BA0B" />
 
       {/* Modern Garage / Carport on left */}
       <rect x="90" y="145" width="60" height="55" rx="3" fill="url(#wallGrad)" />
@@ -103,9 +103,9 @@ export default function SolarHouseVisual() {
       <path d="M157 166 Q154 175 145 178" stroke="#2563EB" strokeWidth="1.5" fill="none" />
 
       {/* Energy Flow Particle Sparkles */}
-      <circle cx="210" cy="55" r="2.5" fill="#FFD700" />
+      <circle cx="210" cy="55" r="2.5" fill="#F7BA0B" />
       <circle cx="260" cy="62" r="2" fill="#60CAF3" />
-      <circle cx="180" cy="78" r="2" fill="#FFD700" />
+      <circle cx="180" cy="78" r="2" fill="#F7BA0B" />
     </svg>
   );
 }

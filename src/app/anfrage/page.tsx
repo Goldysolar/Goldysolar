@@ -60,6 +60,7 @@ export default function AnfragePage() {
     telefon: '',
     plzOrt: '',
     nachricht: '',
+    website_url: '',
     privacyAccepted: true,
   });
 
@@ -189,8 +190,8 @@ export default function AnfragePage() {
         }
         .simulator-option-card:hover {
           transform: translateY(-7px) scale(1.02);
-          border-color: #FFD700;
-          box-shadow: 0 16px 32px rgba(255, 215, 0, 0.22);
+          border-color: #F7BA0B;
+          box-shadow: 0 16px 32px rgba(247, 186, 11, 0.22);
         }
         .simulator-option-card.selected {
           border-color: #4285F4;
@@ -237,10 +238,10 @@ export default function AnfragePage() {
               padding: '5px 16px',
             }}
           >
-            <Sparkles size={15} color="#FFD700" />
+            <Sparkles size={15} color="#F7BA0B" />
             <span>1-MINUTE SOLAR- & ENERGIE-ANFRAGE</span>
           </span>
-          <h1 style={{ fontSize: '32px', fontWeight: 900, color: '#FFD700', marginTop: '12px', marginBottom: '8px', letterSpacing: '-0.5px' }}>
+          <h1 style={{ fontSize: '32px', fontWeight: 900, color: '#F7BA0B', marginTop: '12px', marginBottom: '8px', letterSpacing: '-0.5px' }}>
             Ihr Umstieg auf saubere & erneuerbare Energie
           </h1>
           <p style={{ fontSize: '15.5px', color: '#64748B', maxWidth: '680px', margin: '0 auto', lineHeight: 1.5 }}>
@@ -267,7 +268,7 @@ export default function AnfragePage() {
                   style={{
                     width: `${progressPercentage}%`,
                     height: '100%',
-                    background: 'linear-gradient(90deg, #4285F4 0%, #FFD700 100%)',
+                    background: 'linear-gradient(90deg, #4285F4 0%, #F7BA0B 100%)',
                     borderRadius: '9999px',
                     transition: 'width 0.35s ease',
                   }}
@@ -976,6 +977,20 @@ export default function AnfragePage() {
                   value={formData.nachricht}
                   onChange={(e) => setFormData({ ...formData, nachricht: e.target.value })}
                   style={{ width: '100%', padding: '12px 14px', borderRadius: '12px', border: '1.5px solid #CBD5E1', fontSize: '14px', color: '#0E2841', resize: 'vertical' }}
+                />
+              </div>
+
+              {/* Honeypot field (hidden from humans, traps automated spam bots) */}
+              <div style={{ position: 'absolute', opacity: 0, zIndex: -1, pointerEvents: 'none', height: 0, overflow: 'hidden' }} aria-hidden="true">
+                <label htmlFor="website_url">Website</label>
+                <input
+                  id="website_url"
+                  type="text"
+                  name="website_url"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  value={formData.website_url || ''}
+                  onChange={(e) => setFormData({ ...formData, website_url: e.target.value })}
                 />
               </div>
 

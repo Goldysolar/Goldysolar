@@ -84,13 +84,13 @@ export default function SolarCommercialVisual() {
       <line x1="265" y1="165" x2="350" y2="135" stroke="#93C5FD" strokeWidth="0.8" />
 
       {/* Commercial Transformer / Inverter Box Station on Ground */}
-      <rect x="75" y="168" width="34" height="27" rx="2" fill="#0F4761" stroke="#FFD700" strokeWidth="1.2" />
-      <path d="M88 174 L96 174 L90 182 L97 182 L87 192 L90 184 L85 184 Z" fill="#FFD700" />
+      <rect x="75" y="168" width="34" height="27" rx="2" fill="#0F4761" stroke="#F7BA0B" strokeWidth="1.2" />
+      <path d="M88 174 L96 174 L90 182 L97 182 L87 192 L90 184 L85 184 Z" fill="#F7BA0B" />
 
       {/* Peak Shaving Pulsing Nodes */}
-      <circle cx="215" cy="75" r="2.5" fill="#FFD700" />
+      <circle cx="215" cy="75" r="2.5" fill="#F7BA0B" />
       <circle cx="280" cy="65" r="2" fill="#60CAF3" />
-      <circle cx="160" cy="90" r="2" fill="#FFD700" />
+      <circle cx="160" cy="90" r="2" fill="#F7BA0B" />
     </svg>
   );
 }
