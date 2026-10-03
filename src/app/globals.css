@@ -8,8 +8,8 @@
   --color-royal-blue: #4285F4;
   --color-royal-blue-hover: #3367D6;
   --color-royal-blue-light: rgba(66, 133, 244, 0.1);
-  --color-gold-yellow: #F7BA0B;
-  --color-gold-yellow-hover: #DEA70A;
+  --color-gold-yellow: #FFDD00;
+  --color-gold-yellow-hover: #E6C800;
   --color-yellow-accent: #FFFF00;
 
   /* 2. Text & Hintergrund */
@@ -97,7 +97,7 @@ img {
 
 /* Global Heading Colors - Gold */
 h1, h2, h3, h4, h5, h6 {
-  color: #F7BA0B;
+  color: #FFDD00;
 }
 
 /* Container */
@@ -356,13 +356,13 @@ h1, h2, h3, h4, h5, h6 {
 .btn-gold {
   background: var(--color-gold-yellow);
   color: #000000;
-  box-shadow: 0 4px 14px rgba(247, 186, 11, 0.35);
+  box-shadow: 0 4px 14px rgba(255, 221, 0, 0.35);
 }
 
 .btn-gold:hover {
   background: var(--color-gold-yellow-hover);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(247, 186, 11, 0.45);
+  box-shadow: 0 6px 20px rgba(255, 221, 0, 0.45);
 }
 
 .btn-white {
@@ -523,7 +523,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero-subtitle {
   font-size: 21px;
   font-weight: 800;
-  color: #F7BA0B;
+  color: #FFDD00;
   line-height: 1.4;
   margin-bottom: 40px;
   letter-spacing: 0.3px;
@@ -553,12 +553,12 @@ h1, h2, h3, h4, h5, h6 {
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  background: rgba(247, 186, 11, 0.25);
-  border: 1.5px solid #F7BA0B;
+  background: rgba(255, 221, 0, 0.25);
+  border: 1.5px solid #FFDD00;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #F7BA0B;
+  color: #FFDD00;
   flex-shrink: 0;
 }
 
@@ -575,7 +575,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 14px 40px;
   border-radius: 9999px;
   border: none;
-  box-shadow: 0 4px 14px rgba(247, 186, 11, 0.35);
+  box-shadow: 0 4px 14px rgba(255, 221, 0, 0.35);
   text-decoration: none;
   transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
@@ -585,7 +585,7 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--color-gold-yellow-hover);
   color: #000000;
   transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 6px 20px rgba(247, 186, 11, 0.5);
+  box-shadow: 0 6px 20px rgba(255, 221, 0, 0.5);
 }
 
 /* Wiesen-Landschaft Hintergrund */
@@ -640,7 +640,7 @@ h1, h2, h3, h4, h5, h6 {
 .section-header h2 {
   font-size: 38px;
   font-weight: 800;
-  color: #F7BA0B;
+  color: #FFDD00;
   line-height: 1.25;
   margin-bottom: 14px;
 }
@@ -685,7 +685,7 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(-50%);
   width: 90px;
   height: 90px;
-  filter: drop-shadow(0 8px 16px rgba(247, 186, 11, 0.3));
+  filter: drop-shadow(0 8px 16px rgba(255, 221, 0, 0.3));
 }
 
 .banner-decor-plug {
@@ -991,7 +991,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 20px;
-  color: #F7BA0B;
+  color: #FFDD00;
 }
 
 .footer-links {
@@ -1095,7 +1095,7 @@ h1, h2, h3, h4, h5, h6 {
 .not-found-sun-icon {
   width: 130px;
   height: 130px;
-  filter: drop-shadow(0 12px 24px rgba(247, 186, 11, 0.4));
+  filter: drop-shadow(0 12px 24px rgba(255, 221, 0, 0.4));
 }
 
 .not-found-title {
@@ -1262,7 +1262,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   right: 0;
   height: 6px;
-  background: linear-gradient(90deg, #0F4761 0%, #4285F4 50%, #F7BA0B 100%);
+  background: linear-gradient(90deg, #0F4761 0%, #4285F4 50%, #FFDD00 100%);
 }
 
 .service-segment-header {
@@ -1493,7 +1493,7 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateX(-50%);
   width: 900px;
   height: 350px;
-  background: radial-gradient(ellipse at center, rgba(66, 133, 244, 0.12) 0%, rgba(247, 186, 11, 0.08) 45%, transparent 75%);
+  background: radial-gradient(ellipse at center, rgba(66, 133, 244, 0.12) 0%, rgba(255, 221, 0, 0.08) 45%, transparent 75%);
   pointer-events: none;
   z-index: 1;
 }
@@ -1767,7 +1767,7 @@ h1, h2, h3, h4, h5, h6 {
 .stat-counter-value {
   font-size: 38px;
   font-weight: 900;
-  color: #F7BA0B;
+  color: #FFDD00;
   line-height: 1.1;
   margin-bottom: 6px;
 }

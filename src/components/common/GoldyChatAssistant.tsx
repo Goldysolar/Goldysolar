@@ -169,7 +169,7 @@ export default function GoldyChatAssistant() {
         <button 
           onClick={() => setIsOpen(true)}
           style={{
-            backgroundColor: '#F7BA0B',
+            backgroundColor: '#FFDD00',
             color: '#4285F4',
             border: 'none',
             borderRadius: '50%',
@@ -211,7 +211,7 @@ export default function GoldyChatAssistant() {
             alignItems: 'center'
           }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-              <div style={{ background: '#F7BA0B', borderRadius: '50%', padding: '6px', color: '#4285F4' }}>
+              <div style={{ background: '#FFDD00', borderRadius: '50%', padding: '6px', color: '#4285F4' }}>
                 <Bot size={22} />
               </div>
               <div>

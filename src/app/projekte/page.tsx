@@ -77,9 +77,9 @@ const projektBilder = [
    Statistik-Zahlen
    ───────────────────────────────────────────── */
 const stats = [
-  { icon: <Sun size={22} color="#F7BA0B" />, wert: '15+', label: 'Jahre Erfahrung' },
+  { icon: <Sun size={22} color="#FFDD00" />, wert: '15+', label: 'Jahre Erfahrung' },
   { icon: <Building2 size={22} color="#4285F4" />, wert: '200+', label: 'Realisierte Projekte' },
-  { icon: <Zap size={22} color="#F7BA0B" />, wert: '5 MWp+', label: 'Installierte Leistung' },
+  { icon: <Zap size={22} color="#FFDD00" />, wert: '5 MWp+', label: 'Installierte Leistung' },
   { icon: <Award size={22} color="#4285F4" />, wert: '100%', label: 'VDE-Konformität' },
 ];
 
@@ -102,7 +102,7 @@ export default function ProjectsPage() {
               style={{
                 fontSize: 'clamp(24px, 3vw, 34px)',
                 fontWeight: 900,
-                color: '#F7BA0B',
+                color: '#FFDD00',
                 lineHeight: 1.25,
                 marginBottom: '10px',
               }}
@@ -306,7 +306,7 @@ export default function ProjectsPage() {
             fontWeight: 800, 
             borderRadius: '9999px', 
             padding: '16px 36px',
-            boxShadow: '0 4px 14px rgba(247, 186, 11, 0.3)'
+            boxShadow: '0 4px 14px rgba(255, 221, 0, 0.3)'
           }}
         >
           <span>1 Minute Anfrage</span>

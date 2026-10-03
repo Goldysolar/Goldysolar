@@ -83,7 +83,7 @@ export default function SolarUtilityVisual() {
       <polygon points="60,152 84,142 108,152" fill="#1E293B" />
       {/* Ventilation & Warning High Voltage */}
       <rect x="74" y="160" width="20" height="12" fill="#1E293B" rx="1" />
-      <path d="M84 163 L87 163 L84 168 L88 168 L82 174 L84 169 L80 169 Z" fill="#F7BA0B" />
+      <path d="M84 163 L87 163 L84 168 L88 168 L82 174 L84 169 L80 169 Z" fill="#FFDD00" />
 
       {/* Grid High Voltage Pylon in distant background */}
       <g stroke="#94A3B8" strokeWidth="1" opacity="0.6">
@@ -99,7 +99,7 @@ export default function SolarUtilityVisual() {
       </g>
 
       {/* SCADA Light Pulsing Dots */}
-      <circle cx="200" cy="148" r="2.5" fill="#F7BA0B" />
+      <circle cx="200" cy="148" r="2.5" fill="#FFDD00" />
       <circle cx="280" cy="112" r="2" fill="#60CAF3" />
       <circle cx="84" cy="142" r="2" fill="#22C55E" />
     </svg>

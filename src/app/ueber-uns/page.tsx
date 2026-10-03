@@ -20,7 +20,7 @@ export default function AboutPage() {
               lineHeight: 1.25,
             }}
           >
-            <span style={{ color: '#F7BA0B' }}>Technik. Erfahrung. Zuverlässigkeit.</span>
+            <span style={{ color: '#FFDD00' }}>Technik. Erfahrung. Zuverlässigkeit.</span>
           </h1>
         </div>
 
@@ -38,7 +38,7 @@ export default function AboutPage() {
             overflow: 'hidden',
           }}
         >
-          <div style={{ height: '6px', width: '100%', background: 'linear-gradient(90deg, #4285F4 0%, #F7BA0B 100%)', position: 'absolute', top: 0, left: 0 }} />
+          <div style={{ height: '6px', width: '100%', background: 'linear-gradient(90deg, #4285F4 0%, #FFDD00 100%)', position: 'absolute', top: 0, left: 0 }} />
           
           <div style={{ fontSize: '17px', lineHeight: 1.85, color: '#334155' }}>
             <p style={{ marginBottom: '20px' }}>

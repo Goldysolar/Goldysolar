@@ -100,7 +100,7 @@ export async function POST(req: Request) {
           .header { background: #4285F4; padding: 24px 30px; color: #FFFFFF; text-align: center; }
           .header h1 { margin: 0; font-size: 22px; font-weight: 800; color: #FFFFFF; }
           .header p { margin: 6px 0 0; color: #EAF4FA; font-size: 14px; }
-          .badge { display: inline-block; background: #F7BA0B; color: #0E2841; font-weight: 800; font-size: 12px; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; margin-top: 10px; }
+          .badge { display: inline-block; background: #FFDD00; color: #0E2841; font-weight: 800; font-size: 12px; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; margin-top: 10px; }
           .content { padding: 30px; }
           .section-title { font-size: 16px; font-weight: 800; color: #0E2841; border-bottom: 2px solid #4285F4; padding-bottom: 8px; margin-top: 24px; margin-bottom: 16px; }
           .data-table { width: 100%; border-collapse: collapse; }

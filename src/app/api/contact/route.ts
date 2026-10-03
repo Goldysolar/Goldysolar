@@ -95,7 +95,7 @@ export async function POST(request: Request) {
         subject: `⚡ Neue Chat-Anfrage von ${name}`,
         html: `
           <div style="font-family: Arial, sans-serif; color: #0E2841; padding: 20px;">
-            <h2 style="color: #4285F4; border-bottom: 2px solid #F7BA0B; padding-bottom: 8px;">
+            <h2 style="color: #4285F4; border-bottom: 2px solid #FFDD00; padding-bottom: 8px;">
               Neue Projektanfrage via Chat-Assistent
             </h2>
             <p><strong>Name:</strong> ${name}</p>
