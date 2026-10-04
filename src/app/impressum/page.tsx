@@ -3,7 +3,10 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Impressum | Goldy Solar GmbH',
-  description: 'Impressum und rechtliche Hinweise der Goldy Solar GmbH',
+  description: 'Impressum und gesetzliche Anbieterkennzeichnung der Goldy Solar GmbH nach § 5 DDG.',
+  alternates: {
+    canonical: 'https://goldysolar.de/impressum',
+  },
 };
 
 export default function ImpressumPage() {

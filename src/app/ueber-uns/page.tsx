@@ -1,6 +1,31 @@
-'use client';
-
 import React from 'react';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Über Uns | Ingenieurkompetenz & Meisterhandwerk',
+  description:
+    'Erfahren Sie mehr über die Goldy Solar GmbH und Geschäftsführer Sabah Altaweel – über 15 Jahre meisterliche Erfahrung in Photovoltaik, Elektrotechnik, Netzintegration und Projektmanagement.',
+  keywords: [
+    'Über Goldy Solar',
+    'Sabah Altaweel',
+    'Elektroingenieur Photovoltaik',
+    'Solar Fachbetrieb Heidelberg',
+    'Photovoltaik Erfahrung',
+    'Solarteur Heidelberg',
+  ],
+  alternates: {
+    canonical: 'https://goldysolar.de/ueber-uns',
+  },
+  openGraph: {
+    title: 'Über Uns | Goldy Solar GmbH',
+    description:
+      'Die Goldy Solar GmbH verbindet elektrotechnisches Handwerk mit professioneller Ingenieurkompetenz unter Leitung von Sabah Altaweel.',
+    url: 'https://goldysolar.de/ueber-uns',
+    siteName: 'Goldy Solar GmbH',
+    locale: 'de_DE',
+    type: 'website',
+  },
+};
 
 export default function AboutPage() {
   return (

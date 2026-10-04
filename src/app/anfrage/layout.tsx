@@ -1,15 +1,24 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Kostenlose PV-Anfrage | Goldy Solar GmbH',
-  description: 'Fordern Sie jetzt Ihr unverbindliches Angebot für eine Photovoltaikanlage, Batteriespeicher oder Wallbox an. In nur 2 Minuten zum Solar-Angebot.',
-  keywords: ['Photovoltaik Angebot', 'PV-Anlage berechnen', 'Solarstrom Angebot', 'Goldy Solar Anfrage', 'Heidelberg Solar Angebot'],
+  title: '1-Minute Anfrage: PV, Speicher & Wallbox | Goldy Solar GmbH',
+  description:
+    'In nur 1 Minute zu Ihrem unverbindlichen Angebot für Photovoltaikanlage, Batteriespeicher oder Wallbox. Kostenlose Dachanalyse und Fachberatung aus Heidelberg.',
+  keywords: [
+    'Photovoltaik Angebot anfordern',
+    'PV-Anlage berechnen',
+    'Solarstrom Angebot',
+    'Batteriespeicher Angebot',
+    'Wallbox Angebot Heidelberg',
+    'Goldy Solar Anfrage',
+  ],
   alternates: {
     canonical: 'https://goldysolar.de/anfrage',
   },
   openGraph: {
-    title: 'Kostenlose Photovoltaik-Anfrage | Goldy Solar',
-    description: 'Fordern Sie jetzt Ihr maßgeschneidertes, unverbindliches Angebot für Ihre PV-Anlage an.',
+    title: '1-Minute Solar-Anfrage | Goldy Solar GmbH',
+    description:
+      'Fordern Sie jetzt Ihr maßgeschneidertes, unverbindliches Angebot für PV-Anlage, Batteriespeicher und Wallbox an.',
     url: 'https://goldysolar.de/anfrage',
     siteName: 'Goldy Solar GmbH',
     locale: 'de_DE',

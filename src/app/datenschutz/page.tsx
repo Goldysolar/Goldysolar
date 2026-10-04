@@ -4,7 +4,10 @@ import PageHeroBanner from '@/components/common/PageHeroBanner';
 
 export const metadata: Metadata = {
   title: 'Datenschutzerklärung | Goldy Solar GmbH Heidelberg',
-  description: 'Datenschutzerklärung der Goldy Solar GmbH.',
+  description: 'Datenschutzerklärung und Informationen zur DSGVO-konformen Datenverarbeitung der Goldy Solar GmbH.',
+  alternates: {
+    canonical: 'https://goldysolar.de/datenschutz',
+  },
 };
 
 export default function DatenschutzPage() {

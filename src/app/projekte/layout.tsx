@@ -1,15 +1,25 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Referenzprojekte & Installationen | Goldy Solar GmbH',
-  description: 'Sehen Sie sich unsere erfolgreich abgeschlossenen Photovoltaik-Projekte an. Von Einfamilienhäusern bis zu industriellen Solaranlagen (EPC) in ganz Deutschland.',
-  keywords: ['Photovoltaik Referenzen', 'Solaranlagen Projekte', 'C&I Solarprojekte', 'EPC Montage Referenzen', 'Goldy Solar Installationen'],
+  title: 'Referenzprojekte: PV, Speicher & Solaranlagen | Goldy Solar GmbH',
+  description:
+    'Entdecken Sie unsere realisierten PV-Projekte, Batteriespeicher und Wallbox-Installationen – von privaten Dachanlagen bis zu industriellen Solarparks (EPC) in ganz Deutschland.',
+  keywords: [
+    'Photovoltaik Referenzen',
+    'PV Projekte Deutschland',
+    'Solaranlagen Projekte Heidelberg',
+    'C&I Solarprojekte',
+    'EPC Montage Referenzen',
+    'Batteriespeicher Installation Referenz',
+    'Goldy Solar Installationen',
+  ],
   alternates: {
     canonical: 'https://goldysolar.de/projekte',
   },
   openGraph: {
-    title: 'Erfolgreiche Solar-Projekte von Goldy Solar',
-    description: 'Entdecken Sie unsere Referenzen im Bereich Photovoltaik und Batteriespeicher.',
+    title: 'Referenzprojekte & Installationen | Goldy Solar GmbH',
+    description:
+      'Erfolgreich realisierte Solar- und Speicherprojekte in ganz Deutschland.',
     url: 'https://goldysolar.de/projekte',
     siteName: 'Goldy Solar GmbH',
     locale: 'de_DE',

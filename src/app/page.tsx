@@ -1,22 +1,40 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Goldy Solar GmbH | Photovoltaik & Solaranlagen in Heidelberg",
-  description: "Ihr zertifizierter Experte für Photovoltaik, Batteriespeicher, Wallboxen und EPC-Montage in Heidelberg und deutschlandweit. Sichern Sie sich saubere Energie.",
-  keywords: ["Photovoltaik", "Solaranlagen", "Batteriespeicher", "Wallbox", "EPC Montage", "Heidelberg", "Gewerbe Solar", "Goldy Solar GmbH"],
-  alternates: { canonical: "https://goldysolar.de/" },
+  title: "Goldy Solar GmbH | PV. Speicher. Wallboxen in Heidelberg & bundesweit",
+  description: "Ihr zertifizierter Fachbetrieb für Photovoltaik (PV), Batteriespeicher und Wallboxen in Heidelberg und ganz Deutschland. Schlüsselfertige Solar-Lösungen aus Meisterhand.",
+  keywords: [
+    "Photovoltaik Heidelberg",
+    "PV Anlage kaufen",
+    "Batteriespeicher",
+    "Wallbox Heidelberg",
+    "Solaranlage Gewerbe",
+    "EPC Montage",
+    "Goldy Solar GmbH",
+    "Sabah Altaweel",
+  ],
+  alternates: { canonical: "https://goldysolar.de" },
   openGraph: {
-    title: "Goldy Solar GmbH | Ihr Partner für Photovoltaik",
-    description: "Professionelle Planung und Installation von Photovoltaik, Batteriespeichern und Wallboxen für Eigenheim und Gewerbe.",
-    url: "https://goldysolar.de/",
+    title: "Goldy Solar GmbH | PV. Speicher. Wallboxen",
+    description: "Professionelle Planung und VDE-Montage von PV-Anlagen, Batteriespeichern und Wallboxen für Eigenheim und Gewerbe.",
+    url: "https://goldysolar.de",
     siteName: "Goldy Solar GmbH",
     locale: "de_DE",
     type: "website",
+    images: [
+      {
+        url: "https://goldysolar.de/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Goldy Solar GmbH - PV, Speicher, Wallboxen",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Goldy Solar GmbH | Photovoltaik & Speichersysteme",
-    description: "Professionelle Solar-Lösungen für Eigenheim und Gewerbe in ganz Deutschland.",
+    title: "Goldy Solar GmbH | PV. Speicher. Wallboxen",
+    description: "Ihr Fachbetrieb für Photovoltaik, Batteriespeicher und Wallboxen in Heidelberg & ganz Deutschland.",
+    images: ["https://goldysolar.de/logo.png"],
   },
 };
 
@@ -165,7 +183,7 @@ export default function HomePage() {
 
               {/* Haupt-Headline mit eleganten Trennpunkten */}
               <h1 className="hero-main-headline">
-                Solaranlagen • Speicher • Montage
+                PV. Speicher. Wallboxen
               </h1>
 
               {/* Untertitel */}

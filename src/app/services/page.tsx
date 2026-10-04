@@ -26,9 +26,31 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Service & Leistungen | Goldy Solar GmbH',
+  title: 'Leistungen: PV, Speicher, Wallboxen & EPC Montage',
   description:
-    'Komplettes Leistungsspektrum der Goldy Solar GmbH: Privatkunden-PV, Gewerbe & Industrie Solaranlagen sowie EPC & Utility Services.',
+    'Komplettes Leistungsspektrum der Goldy Solar GmbH: Photovoltaik für Privathäuser, Gewerbe- & Industrie-Solar (C&I), Batteriespeicher, Wallbox-Ladeinfrastruktur sowie EPC- & Utility-Services.',
+  keywords: [
+    'Photovoltaik Leistungen',
+    'PV Anlage Eigenheim',
+    'Gewerbe Solar C&I',
+    'Batteriespeicher nachrüsten',
+    'Wallbox Ladeinfrastruktur',
+    'EPC Nachunternehmer Solarparks',
+    'Zählerschrank Erneuerung',
+    'VDE Netzanschluss',
+  ],
+  alternates: {
+    canonical: 'https://goldysolar.de/services',
+  },
+  openGraph: {
+    title: 'Leistungen & Services | Goldy Solar GmbH',
+    description:
+      'Solarlösungen für jeden Bedarf: Private Dachanlagen, gewerbliche PV-Großanlagen, moderne Speicher und Wallboxen.',
+    url: 'https://goldysolar.de/services',
+    siteName: 'Goldy Solar GmbH',
+    locale: 'de_DE',
+    type: 'website',
+  },
 };
 
 export default function ServicesPage() {
