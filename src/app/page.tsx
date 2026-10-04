@@ -40,10 +40,14 @@ import {
 } from 'lucide-react';
 
 const CustomSunLogo = ({ size = 110, color = '#FFDD00' }: { size?: number, color?: string }) => (
-  <svg width={size} height={size} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-    {/* White background inside the sun ring */}
-    <circle cx="50" cy="50" r="33" fill="#FFFFFF" />
-    
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 100 100"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    style={{ filter: 'drop-shadow(0 0 15px rgba(255, 221, 0, 0.7))' }}
+  >
     {/* Floating Rays */}
     <g fill={color}>
       {[0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330].map((angle) => (
@@ -122,11 +126,10 @@ export default function HomePage() {
             style={{
               position: 'absolute',
               left: '20%',
-              bottom: '30px',
+              bottom: '55px',
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
-              color: '#FFFFFF',
               zIndex: 5,
             }}
           >
@@ -134,13 +137,9 @@ export default function HomePage() {
               style={{
                 width: '140px',
                 height: '140px',
-                borderRadius: '50%',
-                background: 'rgba(255, 255, 255, 0.25)',
-                backdropFilter: 'blur(8px)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                border: '3px solid rgba(255, 255, 255, 0.6)',
                 position: 'relative',
               }}
             >
@@ -153,27 +152,27 @@ export default function HomePage() {
         <div className="container" style={{ position: 'relative', zIndex: 6, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
           
           <div className="hero-content-inner">
-            {/* Firmenname Prominent mit transparentem GmbH gleicher Schriftgröße */}
-            <div className="hero-company-title">
-              <span className="hero-company-name">
-                GOLDY SOLAR
-              </span>
-              <span className="hero-company-suffix">
-                GmbH
-              </span>
+            <div className="hero-text-block">
+              {/* Firmenname Prominent mit transparentem GmbH gleicher Schriftgröße */}
+              <div className="hero-company-title">
+                <span className="hero-company-name">
+                  GOLDY SOLAR
+                </span>
+                <span className="hero-company-suffix">
+                  GmbH
+                </span>
+              </div>
+
+              {/* Haupt-Headline mit eleganten Trennpunkten */}
+              <h1 className="hero-main-headline">
+                Solaranlagen • Speicher • Montage
+              </h1>
+
+              {/* Untertitel */}
+              <p className="hero-subtitle">
+                Ihr Fachbetrieb für Photovoltaik
+              </p>
             </div>
-
-            {/* Haupt-Headline mit eleganten Trennpunkten */}
-            <h1 className="hero-main-headline">
-              Solaranlagen • Speicher • Montage
-            </h1>
-
-            {/* Untertitel */}
-            <p className="hero-subtitle">
-              Ihr Fachbetrieb für Photovoltaik
-            </p>
-
-
 
             {/* Hero CTA Button */}
             <div>
