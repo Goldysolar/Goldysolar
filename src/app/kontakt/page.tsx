@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import { COMPANY_INFO } from '@/data/companyData';
 import {

@@ -5,6 +5,7 @@ import Header from '@/components/common/Header';
 import Footer from '@/components/common/Footer';
 import GoldyChatAssistant from '@/components/common/GoldyChatAssistant';
 import CookieConsent from '@/components/common/CookieConsent';
+import { COMPANY_INFO } from '@/data/companyData';
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -124,7 +125,7 @@ export default function RootLayout({
                   },
                   contactPoint: {
                     '@type': 'ContactPoint',
-                    telephone: '+49-6221-5026666',
+                    telephone: COMPANY_INFO.contact.phone,
                     contactType: 'customer service',
                     areaServed: 'DE',
                     availableLanguage: ['German', 'English'],
@@ -133,17 +134,17 @@ export default function RootLayout({
                 {
                   '@type': ['LocalBusiness', 'SolarEnergyContractor', 'Electrician'],
                   '@id': 'https://goldysolar.de/#localbusiness',
-                  name: 'Goldy Solar GmbH',
+                  name: COMPANY_INFO.name,
                   image: 'https://goldysolar.de/logo.png',
                   url: 'https://goldysolar.de',
-                  telephone: '+49 6221 502 6666',
-                  email: 'info@goldysolar.de',
+                  telephone: COMPANY_INFO.contact.phone,
+                  email: COMPANY_INFO.contact.email,
                   priceRange: '€€€',
                   address: {
                     '@type': 'PostalAddress',
-                    streetAddress: 'Rudolf-Diesel-Straße 11',
-                    addressLocality: 'Heidelberg',
-                    postalCode: '69115',
+                    streetAddress: COMPANY_INFO.address.street,
+                    addressLocality: COMPANY_INFO.address.city,
+                    postalCode: COMPANY_INFO.address.zip,
                     addressCountry: 'DE',
                   },
                   geo: {

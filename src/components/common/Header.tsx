@@ -2,36 +2,19 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import GoldyLogo from '@/components/icons/GoldyLogo';
 import { COMPANY_INFO } from '@/data/companyData';
 import { Mail, PhoneCall, Menu, X, Phone, ArrowRight } from 'lucide-react';
 
 export default function Header() {
   const pathname = usePathname();
-  const router = useRouter();
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
-
-  const handleLeistungenClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    setMobileMenuOpen(false);
-    if (pathname === '/') {
-      const el = document.getElementById('unsere-leistungen');
-      if (el) {
-        const headerHeight = document.querySelector('header')?.offsetHeight ?? 100;
-        const elementTop = el.getBoundingClientRect().top + window.scrollY;
-        const offset = headerHeight + 32;
-        window.scrollTo({ top: elementTop - offset, behavior: 'smooth' });
-      }
-    } else {
-      router.push('/#unsere-leistungen');
-    }
-  };
 
   const navItems = [
     { label: 'Startseite', href: '/' },
     { label: 'Anfrage', href: '/anfrage' },
-    { label: 'Leistungen', href: '/#unsere-leistungen', onClick: handleLeistungenClick },
+    { label: 'Leistungen', href: '/#unsere-leistungen' },
     { label: 'Projekte', href: '/projekte' },
     { label: 'Über Uns', href: '/ueber-uns' },
     { label: 'Kontakt', href: '/kontakt' },
@@ -110,7 +93,7 @@ export default function Header() {
               const isActive = pathname === item.href || (item.href === '/#unsere-leistungen' && pathname === '/');
               return (
                 <li key={item.href}>
-                  <Link href={item.href} onClick={item.onClick} className={`nav-link ${isActive ? 'active' : ''}`}>
+                  <Link href={item.href} className={`nav-link ${isActive ? 'active' : ''}`}>
                     {item.label}
                   </Link>
                 </li>
@@ -133,10 +116,7 @@ export default function Header() {
                   <li key={item.label}>
                     <Link
                       href={item.href}
-                      onClick={(e) => {
-                        if (item.onClick) item.onClick(e);
-                        setMobileMenuOpen(false);
-                      }}
+                      onClick={() => setMobileMenuOpen(false)}
                       style={{
                         display: 'block',
                         fontSize: '16px',

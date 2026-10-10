@@ -4,7 +4,6 @@ import type { Metadata } from 'next';
 import PageHeroBanner from '@/components/common/PageHeroBanner';
 import ProjectCard from '@/components/common/ProjectCard';
 import ContactCtaBox from '@/components/common/ContactCtaBox';
-import MockBadge from '@/components/common/MockBadge';
 import { CORE_PROJECTS, SERVICE_BENTO_CARDS } from '@/data/projectsData';
 import {
   Sun,

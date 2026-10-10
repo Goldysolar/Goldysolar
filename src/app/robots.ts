@@ -5,7 +5,16 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: ['/api/'],
+      disallow: [
+        '/api/',
+        '/404',
+        '/faq',
+        '/faq/',
+        '/privatkunden',
+        '/privatkunden/',
+        '/not-found',
+        '/_not-found',
+      ],
     },
     sitemap: 'https://goldysolar.de/sitemap.xml',
   };

@@ -1,5 +1,6 @@
 import React from 'react';
 import type { Metadata } from 'next';
+import { COMPANY_INFO } from '@/data/companyData';
 
 export const metadata: Metadata = {
   title: 'Impressum | Goldy Solar GmbH',
@@ -19,23 +20,23 @@ export default function ImpressumPage() {
           Angaben gemäß § 5 Digitale-Dienste-Gesetz (DDG):
         </h2>
         <p style={{ marginBottom: '20px' }}>
-          Goldy Solar GmbH<br />
-          Rudolf-Diesel-Straße 11<br />
-          69115 Heidelberg<br />
-          Deutschland
+          {COMPANY_INFO.name}<br />
+          {COMPANY_INFO.address.street}<br />
+          {COMPANY_INFO.address.zip} {COMPANY_INFO.address.city}<br />
+          {COMPANY_INFO.address.country}
         </p>
 
         <p style={{ marginBottom: '20px' }}>
           <strong>Vertreten durch den Geschäftsführer:</strong><br />
-          Sabah Altaweel
+          {COMPANY_INFO.ceo}
         </p>
 
         <h2 style={{ fontSize: '20px', fontWeight: 800, marginTop: '30px', marginBottom: '12px', color: '#0E2841' }}>
           Kontakt:
         </h2>
         <p style={{ marginBottom: '20px' }}>
-          Telefon: +49 6221 502 6666<br />
-          E-Mail: info@goldysolar.de
+          Telefon: {COMPANY_INFO.contact.phone}<br />
+          E-Mail: {COMPANY_INFO.contact.email}
         </p>
 
         <h2 style={{ fontSize: '20px', fontWeight: 800, marginTop: '30px', marginBottom: '12px', color: '#0E2841' }}>
@@ -43,8 +44,7 @@ export default function ImpressumPage() {
         </h2>
         <p style={{ marginBottom: '20px' }}>
           Eintragung im Handelsregister.<br />
-          Registergericht: Amtsgericht Mannheim<br />
-          Registernummer: HRB 750394
+          Registergericht: {COMPANY_INFO.legal.register}
         </p>
 
         <h2 style={{ fontSize: '20px', fontWeight: 800, marginTop: '30px', marginBottom: '12px', color: '#0E2841' }}>
@@ -52,16 +52,14 @@ export default function ImpressumPage() {
         </h2>
         <p style={{ marginBottom: '20px' }}>
           Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz (UStG):<br />
-          DE367592744
+          {COMPANY_INFO.legal.vatId}
         </p>
 
         <h2 style={{ fontSize: '20px', fontWeight: 800, marginTop: '30px', marginBottom: '12px', color: '#0E2841' }}>
           Verantwortlich für den Inhalt nach § 18 Abs. 2 Medienstaatsvertrag (MStV):
         </h2>
         <p style={{ marginBottom: '20px' }}>
-          Sabah Altaweel<br />
-          Rudolf-Diesel-Straße 11<br />
-          69115 Heidelberg
+          {COMPANY_INFO.legal.mstvResponsible}
         </p>
 
         <h2 style={{ fontSize: '20px', fontWeight: 800, marginTop: '30px', marginBottom: '12px', color: '#0E2841' }}>

@@ -19,7 +19,8 @@ const STEPS = [
   { id: 'RECHTLICHES', question: 'Sind Sie Eigentümer des Gebäudes?', options: ['Ja', 'Ja, Eigentümergemeinschaft', 'Nein'] },
   { id: 'EMAIL', question: 'Vielen Dank! Wie lautet Ihre E-Mail Adresse?', options: [] },
   { id: 'PHONE', question: 'Unter welcher Telefonnummer können wir Sie erreichen? (Optional)', options: ['Überspringen'] },
-  { id: 'PLZ_ORT', question: 'Wie lautet Ihre Postleitzahl und Ort? (Optional)', options: ['Überspringen'] }
+  { id: 'PLZ_ORT', question: 'Wie lautet Ihre Postleitzahl und Ort? (Optional)', options: ['Überspringen'] },
+  { id: 'PRIVACY', question: 'Stimmen Sie der Verarbeitung Ihrer Daten gemäß unserer Datenschutzerklärung (goldysolar.de/datenschutz) zur Angebotserstellung zu?', options: ['Ja, ich stimme zu', 'Nein, ablehnen'] }
 ];
 
 export default function GoldyChatAssistant() {
@@ -88,12 +89,23 @@ export default function GoldyChatAssistant() {
 
       // 2. Validation for Multiple Choice Options
       if (stepInfo.options && stepInfo.options.length > 0 && !['PHONE', 'PLZ_ORT'].includes(stepInfo.id)) {
-        const matchedOption = stepInfo.options.find(opt => opt.toLowerCase() === text.toLowerCase());
-        if (!matchedOption) {
-          addBotMessage("Ich bin ein intelligenter Assistent, der nur auf die Dienste dieser Seite spezialisiert ist. Bitte wählen Sie eine der folgenden Optionen:", stepInfo.options);
-          return;
+        if (stepInfo.id === 'PRIVACY') {
+          if (text.toLowerCase() !== 'ja, ich stimme zu') {
+            addBotMessage(
+              "Ohne Ihre Zustimmung zu den Datenschutzbestimmungen können wir die Anfrage leider nicht übermitteln. Sie können uns alternativ gerne telefonisch unter +49 6221 502 6666 kontaktieren.",
+              ['Ja, ich stimme zu']
+            );
+            return;
+          }
+          newData.privacy = 'Ja';
+        } else {
+          const matchedOption = stepInfo.options.find(opt => opt.toLowerCase() === text.toLowerCase());
+          if (!matchedOption) {
+            addBotMessage("Ich bin ein intelligenter Assistent, der nur auf die Dienste dieser Seite spezialisiert ist. Bitte wählen Sie eine der folgenden Optionen:", stepInfo.options);
+            return;
+          }
+          newData[stepInfo.id.toLowerCase()] = matchedOption;
         }
-        newData[stepInfo.id.toLowerCase()] = matchedOption;
       } 
       // 3. Validation for Text Inputs
       else {
@@ -143,6 +155,7 @@ export default function GoldyChatAssistant() {
               dacheindeckung: newData.dacheindeckung,
               flaeche: newData.flaeche,
               rechtliches: newData.rechtliches,
+              privacyAccepted: true,
               website_url: '',
             })
           });
@@ -168,6 +181,7 @@ export default function GoldyChatAssistant() {
       {!isOpen && (
         <button 
           onClick={() => setIsOpen(true)}
+          aria-label="Goldy Assistenten öffnen"
           style={{
             backgroundColor: '#FFDD00',
             color: '#4285F4',
@@ -221,6 +235,7 @@ export default function GoldyChatAssistant() {
             </div>
             <button 
               onClick={() => setIsOpen(false)}
+              aria-label="Chat-Fenster schließen"
               style={{ background: 'transparent', border: 'none', color: '#FFFFFF', cursor: 'pointer', padding: '4px' }}
             >
               <X size={22} />
@@ -325,6 +340,7 @@ export default function GoldyChatAssistant() {
             <button
               onClick={() => handleSend()}
               disabled={stepIndex >= STEPS.length || isSubmitting || !inputValue.trim()}
+              aria-label="Nachricht senden"
               style={{
                 backgroundColor: inputValue.trim() ? '#4285F4' : '#E2E8F0',
                 color: inputValue.trim() ? '#FFFFFF' : '#94A3B8',

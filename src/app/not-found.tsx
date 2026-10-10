@@ -1,21 +1,34 @@
 import React from 'react';
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import Sun3DIcon from '@/components/icons/Sun3DIcon';
+import CustomSunLogo from '@/components/icons/CustomSunLogo';
 
 export const metadata: Metadata = {
-  title: '404 - Page Not Found | Goldy Solar GmbH',
+  title: '404 - Seite nicht gefunden | Goldy Solar GmbH',
   description: 'Die gesuchte Seite konnte leider nicht gefunden werden.',
+  robots: {
+    index: false,
+    follow: false,
+    nocache: true,
+    googleBot: {
+      index: false,
+      follow: false,
+      noimageindex: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'none',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function NotFound() {
   return (
     <div className="container not-found-container">
-      {/* 4 [3D-Sonne] 4 Layout (Screenshot 4) */}
+      {/* 4 [Hero-Sonne] 4 Layout */}
       <div className="not-found-code-wrapper">
         <span className="not-found-digit">4</span>
         <div className="not-found-sun-icon">
-          <Sun3DIcon size={130} />
+          <CustomSunLogo size={130} color="#FFDD00" />
         </div>
         <span className="not-found-digit">4</span>
       </div>

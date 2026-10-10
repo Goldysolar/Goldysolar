@@ -1,6 +1,7 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import PageHeroBanner from '@/components/common/PageHeroBanner';
+import { COMPANY_INFO } from '@/data/companyData';
 
 export const metadata: Metadata = {
   title: 'Datenschutzerklärung | Goldy Solar GmbH Heidelberg',
@@ -109,16 +110,16 @@ export default function DatenschutzPage() {
             Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:
           </p>
           <p>
-            <strong>Goldy Solar GmbH</strong><br />
-            Rudolf-Diesel-Straße 11<br />
-            69115 Heidelberg<br />
-            Deutschland
+            <strong>{COMPANY_INFO.name}</strong><br />
+            {COMPANY_INFO.address.street}<br />
+            {COMPANY_INFO.address.zip} {COMPANY_INFO.address.city}<br />
+            {COMPANY_INFO.address.country}
           </p>
           <p>
-            <strong>Vertreten durch den Geschäftsführer:</strong> Sabah Altaweel<br />
-            <strong>Telefon:</strong> +49 6221 502 6666<br />
-            <strong>E-Mail:</strong> info@goldysolar.de<br />
-            <strong>Registergericht:</strong> Amtsgericht Mannheim, HRB 750394
+            <strong>Vertreten durch den Geschäftsführer:</strong> {COMPANY_INFO.ceo}<br />
+            <strong>Telefon:</strong> {COMPANY_INFO.contact.phone}<br />
+            <strong>E-Mail:</strong> {COMPANY_INFO.contact.email}<br />
+            <strong>Registergericht:</strong> {COMPANY_INFO.legal.register}
           </p>
           <p>
             Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z. B. Namen, E-Mail-Adressen o. Ä.) entscheidet.

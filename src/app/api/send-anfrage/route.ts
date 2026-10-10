@@ -182,6 +182,13 @@ export async function POST(req: Request) {
       const resData = await response.json();
       return NextResponse.json({ success: true, id: resData.id });
     } else {
+      if (process.env.NODE_ENV === 'production') {
+        console.error('[CRITICAL] RESEND_API_KEY ist in der Produktionsumgebung nicht konfiguriert.');
+        return NextResponse.json(
+          { success: false, error: 'E-Mail-Dienst ist vorübergehend nicht konfiguriert. Bitte kontaktieren Sie uns direkt.' },
+          { status: 500 }
+        );
+      }
       // Dev mode: log payload securely
       console.log('--- [RESEND DEV MOCK - SECURED] Anfrage erhalten ---');
       console.log({

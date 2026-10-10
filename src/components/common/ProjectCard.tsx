@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
-import MockBadge from '@/components/common/MockBadge';
 import { ProjectItem } from '@/types';
 
 interface ProjectCardProps {
@@ -48,7 +47,6 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           }}
         >
           {project.category}
-          {project.isMock && <MockBadge />}
         </span>
       </div>
 

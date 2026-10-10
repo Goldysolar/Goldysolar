@@ -774,65 +774,6 @@ h1, h2, h3, h4, h5, h6 {
   gap: 6px;
 }
 
-/* FAQ 2-Column Accordion Layout (Screenshot 1) */
-.faq-columns-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-  margin-bottom: 60px;
-}
-
-.accordion-item {
-  margin-bottom: 16px;
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  border: 1px solid var(--color-gray-100);
-  background: var(--color-bg-white);
-  box-shadow: var(--shadow-sm);
-  transition: all var(--transition-fast);
-}
-
-.accordion-item.open {
-  border-color: var(--color-royal-blue);
-  box-shadow: 0 6px 20px rgba(66, 133, 244, 0.15);
-}
-
-.accordion-header {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 22px;
-  background: var(--color-bg-white);
-  border: none;
-  cursor: pointer;
-  text-align: left;
-  font-weight: 600;
-  font-size: 16px;
-  color: var(--color-deep-slate-dark);
-  transition: background var(--transition-fast), color var(--transition-fast);
-}
-
-.accordion-item.open .accordion-header {
-  background: var(--color-royal-blue);
-  color: var(--color-bg-white);
-}
-
-.accordion-header-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-}
-
-.accordion-content {
-  padding: 20px 22px;
-  font-size: 15px;
-  color: var(--color-gray-800);
-  background: var(--color-bg-white);
-  line-height: 1.7;
-}
-
 /* Call To Action Box (Screenshot 1) */
 .cta-banner-box {
   background: var(--color-royal-blue);
@@ -1103,6 +1044,9 @@ h1, h2, h3, h4, h5, h6 {
 .not-found-sun-icon {
   width: 130px;
   height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   filter: drop-shadow(0 12px 24px rgba(255, 221, 0, 0.4));
 }
 
@@ -1189,7 +1133,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 768px) {
   .nav-links { display: none; }
-  .projects-grid, .faq-columns-grid, .pricing-grid, .bento-grid, .grid-3-col, .grid-2-col {
+  .projects-grid, .pricing-grid, .bento-grid, .grid-3-col, .grid-2-col {
     grid-template-columns: 1fr;
   }
   .contact-layout-grid {
@@ -2057,4 +2001,8 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 4px;
   font-size: 14px;
   color: #0E2841;
+}
+
+#unsere-leistungen {
+  scroll-margin-top: 100px;
 }

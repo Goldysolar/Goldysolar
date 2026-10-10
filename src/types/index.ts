@@ -46,13 +46,6 @@ export interface CompanyInfo {
   whyUs: WhyUsItem[];
 }
 
-export interface FaqItem {
-  id: string;
-  question: string;
-  answer: string;
-  isMock: boolean;
-}
-
 export interface ProjectItem {
   id: string;
   category: string;

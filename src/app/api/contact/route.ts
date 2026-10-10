@@ -11,7 +11,6 @@ import {
 } from '@/lib/security';
 
 const resendApiKey = process.env.RESEND_API_KEY;
-const resend = new Resend(resendApiKey || 're_default_mock');
 
 export async function POST(request: Request) {
   try {
@@ -88,6 +87,7 @@ export async function POST(request: Request) {
 
     // 6. Send Email or Log in Dev Mode
     if (resendApiKey) {
+      const resend = new Resend(resendApiKey);
       const { data: emailData, error } = await resend.emails.send({
         from: 'Goldy Solar <info@goldysolar.de>',
         to: process.env.CONTACT_EMAIL || 'info@goldysolar.de',
@@ -110,6 +110,7 @@ export async function POST(request: Request) {
               <li><strong>Dacheindeckung:</strong> ${dacheindeckung || 'Nicht angegeben'}</li>
               <li><strong>Flächenkapazität:</strong> ${flaeche || 'Nicht angegeben'}</li>
               <li><strong>Eigentümer:</strong> ${rechtliches || 'Nicht angegeben'}</li>
+              <li><strong>Datenschutz akzeptiert:</strong> Ja (DSGVO-konform via Chat-Assistent)</li>
             </ul>
           </div>
         `,
@@ -122,6 +123,13 @@ export async function POST(request: Request) {
 
       return NextResponse.json({ success: true, data: emailData });
     } else {
+      if (process.env.NODE_ENV === 'production') {
+        console.error('[CRITICAL] RESEND_API_KEY ist in der Produktionsumgebung nicht konfiguriert.');
+        return NextResponse.json(
+          { success: false, error: 'E-Mail-Dienst ist vorübergehend nicht konfiguriert. Bitte kontaktieren Sie uns direkt per Telefon.' },
+          { status: 500 }
+        );
+      }
       console.log('--- [RESEND DEV MOCK - CHAT] Neue Anfrage erhalten ---');
       console.log({ name, email, phone, plzOrt, gebaeudeart, flaeche });
       return NextResponse.json({ success: true, mock: true });
