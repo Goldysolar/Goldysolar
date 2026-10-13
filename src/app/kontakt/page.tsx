@@ -154,19 +154,7 @@ export default function ContactPage() {
                   boxShadow: '0 4px 14px rgba(15, 71, 97, 0.04)',
                 }}
               >
-                <div
-                  style={{
-                    width: '44px',
-                    height: '44px',
-                    borderRadius: '12px',
-                    background: 'rgba(255, 221, 0, 0.15)',
-                    color: '#E6C800',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    flexShrink: 0,
-                  }}
-                >
+                <div className="contact-icon-clock">
                   <Clock size={22} />
                 </div>
                 <div>

@@ -9,7 +9,7 @@ interface CustomSunLogoProps {
 
 export default function CustomSunLogo({
   size = 110,
-  color = '#FFDD00',
+  color = 'var(--color-gold-yellow, #ffcc00)',
   className = '',
   style = {},
 }: CustomSunLogoProps) {
@@ -22,7 +22,7 @@ export default function CustomSunLogo({
       xmlns="http://www.w3.org/2000/svg"
       className={className}
       style={{
-        filter: 'drop-shadow(0 0 15px rgba(255, 221, 0, 0.7))',
+        filter: 'drop-shadow(0 0 15px rgba(var(--color-gold-yellow-rgb, 255, 204, 0), 0.7))',
         ...style,
       }}
       aria-label="Goldy Solar Sun Logo"

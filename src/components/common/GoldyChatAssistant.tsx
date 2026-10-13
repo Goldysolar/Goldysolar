@@ -182,22 +182,7 @@ export default function GoldyChatAssistant() {
         <button 
           onClick={() => setIsOpen(true)}
           aria-label="Goldy Assistenten öffnen"
-          style={{
-            backgroundColor: '#FFDD00',
-            color: '#4285F4',
-            border: 'none',
-            borderRadius: '50%',
-            width: '64px',
-            height: '64px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            boxShadow: '0 6px 20px rgba(0,0,0,0.2)',
-            cursor: 'pointer',
-            transition: 'transform 0.25s ease',
-          }}
-          onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.08)'}
-          onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+          className="goldy-chat-fab"
         >
           <Bot size={34} />
         </button>
@@ -225,7 +210,7 @@ export default function GoldyChatAssistant() {
             alignItems: 'center'
           }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-              <div style={{ background: '#FFDD00', borderRadius: '50%', padding: '6px', color: '#4285F4' }}>
+              <div className="goldy-chat-avatar">
                 <Bot size={22} />
               </div>
               <div>

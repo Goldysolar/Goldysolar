@@ -21,15 +21,15 @@ export default function Footer() {
   return (
     <footer style={{ position: 'relative', width: '100%', overflow: 'hidden' }}>
       {/* Top Accent Gradient Bar */}
-      <div style={{ height: '4px', width: '100%', background: 'linear-gradient(90deg, #4285F4 0%, #FFDD00 50%, #FFFF00 100%)' }} />
+      <div className="footer-gradient-bar" />
 
       {/* TOP SECTION: Sleek White Bar with Centered Logo */}
       <div className="footer-logo-section">
         <div className="container" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           <img 
-            src="/logo.png" 
+            src="/logo.png?v=2" 
             alt="Goldy Solar Logo" 
-            style={{ maxWidth: '180px', width: '100%', height: 'auto', display: 'block', objectFit: 'contain' }} 
+            style={{ maxWidth: '220px', width: '100%', height: 'auto', display: 'block', objectFit: 'contain' }} 
           />
         </div>
       </div>
@@ -42,7 +42,7 @@ export default function Footer() {
           <div className="footer-cols-grid">
             {/* Unternehmen */}
             <div>
-              <h4 style={{ fontSize: '15px', fontWeight: 800, color: '#FFDD00', marginBottom: '16px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+              <h4 className="footer-col-title">
                 Unternehmen
               </h4>
               <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px', padding: 0, margin: 0 }}>
@@ -57,7 +57,7 @@ export default function Footer() {
 
             {/* Leistungen & Lösungen */}
             <div>
-              <h4 style={{ fontSize: '15px', fontWeight: 800, color: '#FFDD00', marginBottom: '16px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+              <h4 className="footer-col-title">
                 Leistungen &amp; Lösungen
               </h4>
               <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '8px', padding: 0, margin: 0 }}>
@@ -73,25 +73,25 @@ export default function Footer() {
 
             {/* Kontakt */}
             <div>
-              <h4 style={{ fontSize: '15px', fontWeight: 800, color: '#FFDD00', marginBottom: '16px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+              <h4 className="footer-col-title">
                 Kontakt
               </h4>
               <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '12px', padding: 0, margin: 0 }}>
                 <li style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
-                  <Mail size={16} color="#FFDD00" style={{ flexShrink: 0, marginTop: '2px' }} />
+                  <Mail size={16} className="footer-contact-icon" />
                   <a href={`mailto:${COMPANY_INFO.contact.email}`} style={{ color: '#EAF4FA', fontSize: '13px', textDecoration: 'none', wordBreak: 'break-all' }}>
                     {COMPANY_INFO.contact.email}
                   </a>
                 </li>
                 <li style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
-                  <Phone size={16} color="#FFDD00" style={{ flexShrink: 0, marginTop: '2px' }} />
+                  <Phone size={16} className="footer-contact-icon" />
                   <div style={{ color: '#EAF4FA', fontSize: '13px' }}>
                     Tel: <a href={`tel:${COMPANY_INFO.contact.phone.replace(/\s+/g, '')}`} style={{ color: '#FFFFFF', fontWeight: 700, textDecoration: 'none' }}>{COMPANY_INFO.contact.phoneDisplay}</a><br />
                     Mobil: <a href={`tel:${COMPANY_INFO.contact.mobile.replace(/\s+/g, '')}`} style={{ color: '#FFFFFF', fontWeight: 700, textDecoration: 'none' }}>{COMPANY_INFO.contact.mobileDisplay}</a>
                   </div>
                 </li>
                 <li style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
-                  <MapPin size={16} color="#FFDD00" style={{ flexShrink: 0, marginTop: '2px' }} />
+                  <MapPin size={16} className="footer-contact-icon" />
                   <div style={{ color: '#EAF4FA', fontSize: '13px' }}>
                     {COMPANY_INFO.address.street}<br />
                     {COMPANY_INFO.address.zip} {COMPANY_INFO.address.city}

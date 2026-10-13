@@ -196,15 +196,15 @@ export default function ServicesPage() {
           {/* Highlights-Balken */}
           <div className="service-highlight-bar">
             <div className="service-highlight-item">
-              <TrendingUp size={20} color="#FFDD00" />
+              <TrendingUp size={20} />
               <span>Bis zu 80% Stromautarkie</span>
             </div>
             <div className="service-highlight-item">
-              <Award size={20} color="#FFDD00" />
+              <Award size={20} />
               <span>25–30 Jahre Leistungsgarantie</span>
             </div>
             <div className="service-highlight-item">
-              <ShieldCheck size={20} color="#FFDD00" />
+              <ShieldCheck size={20} />
               <span>100% schlüsselfertig aus Meisterhand</span>
             </div>
           </div>
@@ -320,15 +320,15 @@ export default function ServicesPage() {
           {/* Highlights-Balken */}
           <div className="service-highlight-bar">
             <div className="service-highlight-item">
-              <TrendingUp size={20} color="#FFDD00" />
+              <TrendingUp size={20} />
               <span>Bis zu 60% Senkung der Energiekosten</span>
             </div>
             <div className="service-highlight-item">
-              <Building2 size={20} color="#FFDD00" />
+              <Building2 size={20} />
               <span>Montage im laufenden Betriebsablauf</span>
             </div>
             <div className="service-highlight-item">
-              <ShieldCheck size={20} color="#FFDD00" />
+              <ShieldCheck size={20} />
               <span>VDE-AR-N 4110 Mittelspannungskonform</span>
             </div>
           </div>
@@ -444,15 +444,15 @@ export default function ServicesPage() {
           {/* Highlights-Balken */}
           <div className="service-highlight-bar">
             <div className="service-highlight-item">
-              <Factory size={20} color="#FFDD00" />
+              <Factory size={20} />
               <span>Megawatt-Kompetenz (1 MWp – 100+ MWp)</span>
             </div>
             <div className="service-highlight-item">
-              <ShieldCheck size={20} color="#FFDD00" />
+              <ShieldCheck size={20} />
               <span>VDE-AR-N 4110 / 4120 Zertifiziert</span>
             </div>
             <div className="service-highlight-item">
-              <Award size={20} color="#FFDD00" />
+              <Award size={20} />
               <span>Eigene Bauleiter & Elektroingenieure</span>
             </div>
           </div>

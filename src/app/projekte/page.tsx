@@ -77,9 +77,9 @@ const projektBilder = [
    Statistik-Zahlen
    ───────────────────────────────────────────── */
 const stats = [
-  { icon: <Sun size={22} color="#FFDD00" />, wert: '15+', label: 'Jahre Erfahrung' },
+  { icon: <Sun size={22} className="text-gold" />, wert: '15+', label: 'Jahre Erfahrung' },
   { icon: <Building2 size={22} color="#4285F4" />, wert: '200+', label: 'Realisierte Projekte' },
-  { icon: <Zap size={22} color="#FFDD00" />, wert: '5 MWp+', label: 'Installierte Leistung' },
+  { icon: <Zap size={22} className="text-gold" />, wert: '5 MWp+', label: 'Installierte Leistung' },
   { icon: <Award size={22} color="#4285F4" />, wert: '100%', label: 'VDE-Konformität' },
 ];
 
@@ -99,10 +99,10 @@ export default function ProjectsPage() {
               Unsere Arbeiten
             </span>
             <h2
+              className="text-gold"
               style={{
                 fontSize: 'clamp(24px, 3vw, 34px)',
                 fontWeight: 900,
-                color: '#FFDD00',
                 lineHeight: 1.25,
                 marginBottom: '10px',
               }}
@@ -300,13 +300,12 @@ export default function ProjectsPage() {
           style={{ 
             display: 'inline-flex', 
             alignItems: 'center', 
-            justifyContent: 'center',
+            justifyContent: 'center', 
             gap: '10px', 
             fontSize: '16px', 
             fontWeight: 800, 
             borderRadius: '9999px', 
             padding: '16px 36px',
-            boxShadow: '0 4px 14px rgba(255, 221, 0, 0.3)'
           }}
         >
           <span>1 Minute Anfrage</span>

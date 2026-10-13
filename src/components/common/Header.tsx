@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import GoldyLogo from '@/components/icons/GoldyLogo';
 import { COMPANY_INFO } from '@/data/companyData';
 import { Mail, PhoneCall, Menu, X, Phone, ArrowRight } from 'lucide-react';
 
@@ -28,7 +27,7 @@ export default function Header() {
           {/* Logo - Immer sichtbar */}
           <div className="header-logo-container">
             <Link href="/">
-              <img src="/logo.png" alt="Goldy Solar Logo" style={{ height: '45px', width: 'auto' }} />
+              <img src="/logo.png?v=2" alt="Goldy Solar Logo" style={{ height: '45px', width: 'auto' }} />
             </Link>
           </div>
 

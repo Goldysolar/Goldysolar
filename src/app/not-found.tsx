@@ -28,7 +28,7 @@ export default function NotFound() {
       <div className="not-found-code-wrapper">
         <span className="not-found-digit">4</span>
         <div className="not-found-sun-icon">
-          <CustomSunLogo size={130} color="#FFDD00" />
+          <CustomSunLogo size={130} />
         </div>
         <span className="not-found-digit">4</span>
       </div>
